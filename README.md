@@ -30,3 +30,13 @@
 
 
   
+# Linear Regression
+
+1. gg
+
+```python
+
+x=f(y)
+print(x)
+
+```
