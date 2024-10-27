@@ -16,9 +16,9 @@
 
 • Decision Boundary: By default, probabilities greater than 0.5 are classified as 1, and those below 0.5 as 0.
 
-• Types: Binary Logistic Regression the on that predicts between two classes (0 or 1), Multinomial Logistic Regression that extend for more than two classes, and Ordinal Logistic Regression that predicts ordered outcomes.
+• Types: Binary Logistic Regression that predicts between two classes (0 or 1), Multinomial Logistic Regression that extend for more than two classes, and Ordinal Logistic Regression that predicts ordered outcomes.
 
-• Goal: Find the best parameters to maximize the likelihood of correctly classifying observations, typically using methods like Maximum Likelihood Estimation (MLE).
+• Goal: To find the best parameters to maximize the likelihood of correctly classifying observations, typically using methods like Maximum Likelihood Estimation (MLE).
 
 • Applications: Predicting whether a customer will purchase a product (yes/no), and for medical diagnosis (e.g., disease present or not).
 
