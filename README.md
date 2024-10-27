@@ -5,7 +5,7 @@
 
 • Types: Simple Linear Regression that uses one independent variable and Multiple Linear Regression that uses more than one independent variable.
 
-• Goal: Minimize the sum of squared residuals (differences between observed and predicted values) to find the best-fitting line, typically using methods like Ordinary Least Squares (OLS).
+• Goal: To minimize the sum of squared residuals (differences between observed and predicted values) to find the best-fitting line, typically using methods like Ordinary Least Squares (OLS).
 
 • Applications: Predicting housing prices based on features like size, location, and amenities and estimating stock prices based on market variables.
 
