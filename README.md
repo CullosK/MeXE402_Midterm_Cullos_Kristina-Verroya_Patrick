@@ -7,7 +7,7 @@
 
 • Goal: To minimize the sum of squared residuals (differences between observed and predicted values) to find the best-fitting line, typically using methods like Ordinary Least Squares (OLS).
 
-• Applications: Predicting housing prices based on features like size, location, and amenities and estimating stock prices based on market variables.
+• Applications: Linear regression is used to predict housing prices based on features like size, location, and amenities and also to estimate stock prices based on market variables.
 
 • Assumptions: Linearity between independent and dependent variables, independence of errors, homoscedasticity (constant variance of errors), and normality of residuals.
 
