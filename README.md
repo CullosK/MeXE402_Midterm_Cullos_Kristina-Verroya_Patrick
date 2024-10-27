@@ -31,12 +31,23 @@
 
   
 # Linear Regression
+## Part 1 - Data Preprocessing
+### Importing libraries and the dataset
 
-1. gg
+
 
 ```python
 
-x=f(y)
-print(x)
+import tkinter as tk
+import pandas as pd
+import numpy as np
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+
+#variable and this is a function for uploading the dataset
+dataset = pd.read_csv('housing.csv') 
 
 ```
