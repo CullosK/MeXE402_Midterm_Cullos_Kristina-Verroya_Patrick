@@ -26,4 +26,4 @@
 
 ## Dataset Description
 
-## Project Objectives: What you aim to achieve with your analyses.
+## Project Objectives
