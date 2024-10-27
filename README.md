@@ -20,7 +20,7 @@
 
 • Goal: To find the best parameters to maximize the likelihood of correctly classifying observations, typically using methods like Maximum Likelihood Estimation (MLE).
 
-• Applications: Predicting whether a customer will purchase a product (yes/no), and for medical diagnosis (e.g., disease present or not).
+• Applications: Predicting whether a customer will purchase a product (yes/no) or for medical diagnosis (e.g., disease present or not) is the application of logistic regression.
 
 • Assumptions: Independence of observations, linearity of independent variables and log-odds, and large sample size (for reliable results).
 
