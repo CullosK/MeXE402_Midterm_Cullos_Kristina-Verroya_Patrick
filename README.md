@@ -24,6 +24,6 @@
 
 • Assumptions: Independence of observations, linearity of independent variables and log-odds, and large sample size (for reliable results).
 
-## Dataset Description: Details about the datasets used.
+### Dataset Description: Details about the datasets used.
 
-## Project Objectives: What you aim to achieve with your analyses.
+### Project Objectives: What you aim to achieve with your analyses.
