@@ -51,3 +51,16 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 dataset = pd.read_csv('housing.csv') 
 
 ```
+
+
+```python
+
+dataset.head() #display 5 rows of dataset
+
+#10,000 rows
+#data points collected from a combined cycle power plant over six years
+#5 columns: AT ambient temp,V exhaust vacuum, AP ambient pressure, RH relative humdity, PE net hourly  electrical energy output
+# independent variables: AT, V, AP and RH
+# dependent variable: PE
+
+```
