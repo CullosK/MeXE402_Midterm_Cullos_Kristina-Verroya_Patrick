@@ -34,6 +34,12 @@
 ## Part 1 - Data Preprocessing
 ### Importing libraries and the dataset
 
+## Data Cleaning
+
+The data is cleaned using Microsoft Excel. The rows that shows error and incomplete are completely removed for more accurate reading. Here are the following rows that are incomplete.
+
+![alt text](image.png)
+
 
 
 ```python
@@ -127,6 +133,28 @@ model = LinearRegression()
 # fit is a method inside LinearRegression class - they are like functions.
 model.fit(X_train, y_train)
 
+
 ```
 
 ![alt text](image.png)
+
+
+### Inference
+
+```python
+y_pred = model.predict(X_test)
+y_pred
+```
+
+### Making the prediction of a single data point with Longitude = -122.26, Latitude = 37.84, Housing Median Age = 52, Total Bedrooms = 696, Populations = 191, Households = 191, Median Income = 345, Median House Value = , 
+
+
+-122.26,37.84,52,696,191,345,174,2.6736,191300,NEAR BAY
+
+
+
+```python
+model.predict([[-122]])
+
+```
+
