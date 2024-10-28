@@ -145,10 +145,12 @@ y_pred = model.predict(X_test)
 y_pred
 ```
 
-### Making the prediction of a single data point with Longitude = -122.26, Latitude = 37.84, Housing Median Age = 52, Total Bedrooms = 696, Populations = 191, Households = 191, Median Income = 345, Median House Value = , 
+### Making the prediction of a single data point with Longitude = -122.23, Latitude = 37.84, Housing Median Age = 50, Total rooms = 2515, Total Bedrooms = 399 , Populations = 970, Households = 373, Median Income = 5.8596
 
+#### Test Sample (Row No. 120) = -122.23,37.84,50,2515,399,970,373,5.8596
+![alt text](<Image Resources/image3.png>)
 
--122.26,37.84,52,696,191,345,174,2.6736,191300,NEAR BAY
+#### Actual Value = 191300
 
 
 
