@@ -38,7 +38,7 @@
 
 The data is cleaned using Microsoft Excel. The rows that shows error and incomplete are completely removed for more accurate reading. Here are the following rows that are incomplete.
 
-![alt text](image.png)
+![alt text](image2.png)
 
 
 
