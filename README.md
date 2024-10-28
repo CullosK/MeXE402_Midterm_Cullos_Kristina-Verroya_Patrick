@@ -150,12 +150,16 @@ y_pred
 #### Test Sample (Row No. 120) = -122.23,37.84,50,2515,399,970,373,5.8596
 ![alt text](<Image Resources/image3.png>)
 
+
 #### Actual Value = 191300
 
 
+### Prediction Model
 
 ```python
-model.predict([[-122]])
-
+model.predict([[-122.23,37.84,50,2515,399,970,373,5.8596]])
 ```
+
+
+
 
