@@ -151,7 +151,8 @@ y_pred
 ![alt text](<Image Resources/image3.png>)
 
 
-#### Actual Value = 191300
+#### Actual Value = $327,600
+
 
 
 ### Prediction Model
@@ -159,6 +160,8 @@ y_pred
 ```python
 model.predict([[-122.23,37.84,50,2515,399,970,373,5.8596]])
 ```
+
+#### Predicted Value = $328,762.40
 
 
 
