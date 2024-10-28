@@ -29,6 +29,21 @@
 ## Project Objectives
 
 
+# Data Cleaning 
+## Linear Regression Data
+
+### Process
+The original data consist of 20641 rows and 10 rows. The data is cleaned using Microsoft Excel and the **rows that are incomplete are completely removed** for more accurate reading. Here are the step by step process on deleting unwanted rows
+
+1. Open Your Excel File: Find the rows using **Find and Select** then **Go to Special**.
+
+![alt text](<Image Resources/image4.png>)
+
+
+2. After selecting **Go to Special**. Sele
+
+![alt text](<Image Resources/image6.png>)
+
   
 # Linear Regression
 ## Part 1 - Data Preprocessing
@@ -36,10 +51,6 @@
 
 ## Data Cleaning
 
-The data is cleaned using Microsoft Excel. The rows that shows error and incomplete are completely removed for more accurate reading. Here are the following rows that are incomplete.
-
-
-![alt text](<Image Resources/image2.png>)
 
 ```python
 
