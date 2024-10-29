@@ -56,10 +56,26 @@
 * Deleted rows are rows 292 and 342
   
 # Linear Regression
-## Part 1 - Data Preprocessing
-### Importing libraries and the dataset
+* Linear regression models the relationship between a dependent variable and one or more independent variables.
+* The model aims to fit a line (or hyperplane for multiple variables) that minimizes the error between predicted and actual values.
 
-## Data Cleaning
+
+
+## Part 1 - Data Preprocessing
+
+
+### Importing libraries and the datase
+
+Libraries:
+* tkinter - Python’s standard GUI (Graphical User Interface) library.
+* pandas  - Provides DataFrame and Series objects for handling and analyzing data in tabular (spreadsheet-like) form.
+* numpy - Numerical computing library used for handling arrays and performing mathematical operations.
+* sklearn.model_selection.train_test_split - Utility function in scikit-learn for splitting datasets into training and testing sets.
+* sklearn.linear_model.LinearRegression - A model from scikit-learn used for performing linear regression.
+* sklearn.metrics.r2_score - A function from scikit-learn to evaluate regression model performance.
+* matplotlib.pyplot (imported as plt) - Used to create various types of charts and plots to visualize data.
+* matplotlib.backends.backend_tkagg.FigureCanvasTkAgg - A matplotlib component that integrates matplotlib plots into a tkinter GU
+
 
 ```python
 
