@@ -29,28 +29,37 @@
 ## Project Objectives
 
 
-# Data Cleaning 
+# Methodology
+
+## Data Cleaning
+
+
 ## Linear Regression Data
-
 ### Process
-The original data consist of 20641 rows and 10 rows. The data is cleaned using Microsoft Excel and the **rows that are incomplete are completely removed** for more accurate reading. Here are the step by step process on deleting unwanted rows
+* The original data consist of 20641 rows and 10 rows. The data is cleaned using Microsoft Excel and 
+* The **rows that are incomplete are completely removed** for more accurate reading.
+* Here are the step by step process on deleting unwanted rows
 
-1. Open Your Excel File: Find the rows using **Find and Select** then **Go to Special**.
+    1. Open Your Excel File: Find the rows using **Find and Select** then **Go to Special**.
 
-![alt text](<Image Resources/image4.png>)
+    ![alt text](<Image Resources/image4.png>)
 
 
-2. After selecting **Go to Special**. Sele
+    2. After selecting **Go to Special**. Select the **Blanks** to search for empty cell.
 
-![alt text](<Image Resources/image6.png>)
+    ![alt text](<Image Resources/image6.png>)
 
+    3. Highlight the rows you want to delete.
+
+    ![alt text](<Image Resources/image7.png>)
+
+* Deleted rows are rows 292 and 342
   
 # Linear Regression
 ## Part 1 - Data Preprocessing
 ### Importing libraries and the dataset
 
 ## Data Cleaning
-
 
 ```python
 
@@ -67,8 +76,6 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 dataset = pd.read_csv('housing.csv') 
 
 ```
-
-
 ```python
 
 dataset.head() #display 5 rows of dataset
@@ -80,7 +87,6 @@ dataset.head() #display 5 rows of dataset
 # dependent variable: PE
 
 ```
-
 ```python
 
 # [rows,columns]
@@ -125,6 +131,8 @@ y_test
 
 ## Part 2 - Building and training the model
 ### Building the model
+
+* from sklearn.linear_model import LinearRegression imports the LinearRegression class.
 
 ```python
 
