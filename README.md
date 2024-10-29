@@ -88,10 +88,16 @@ from sklearn.metrics import r2_score
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
+```
+
+* Loads the data from housing.csv into the dataset variable, allowing the data to be manipulated and analyzed in code.
+
+```python
 #variable and this is a function for uploading the dataset
 dataset = pd.read_csv('housing.csv') 
 
 ```
+
 ```python
 
 dataset.head() #display 5 rows of dataset
@@ -101,8 +107,10 @@ dataset.head() #display 5 rows of dataset
 #5 columns: AT ambient temp,V exhaust vacuum, AP ambient pressure, RH relative humdity, PE net hourly  electrical energy output
 # independent variables: AT, V, AP and RH
 # dependent variable: PE
-
 ```
+![alt text](<Image Resources/image8.png>)
+
+
 ```python
 
 # [rows,columns]
