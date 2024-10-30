@@ -283,3 +283,18 @@ X = np.concatenate((X1,X2,X3),1)
 y = dataset.iloc[:,-1].values
 
 ```
+
+```python
+X
+```
+![image](https://github.com/user-attachments/assets/75375dce-3d7b-43d7-996a-941223571b33)
+
+
+### Creating the Training Set and the Test Set
+
+```python
+y
+```
+
+![image](https://github.com/user-attachments/assets/d3f2c9bd-7f40-4ef5-b80f-253894a938ab)
+
