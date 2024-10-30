@@ -242,7 +242,6 @@ Libraries:
 
 
 ```python
-
 import tkinter as tk
 import pandas as pd
 import numpy as np
@@ -252,6 +251,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
 
 ```
+
 * Imports the data from logisticff.csv into the dataset variable, enabling data manipulation and analysis in code.
 
 ```python
@@ -286,15 +286,47 @@ y = dataset.iloc[:,-1].values
 
 ```python
 X
+
 ```
 ![image](https://github.com/user-attachments/assets/75375dce-3d7b-43d7-996a-941223571b33)
+
+
+```python
+y
+
+```
+![image](https://github.com/user-attachments/assets/fe43aa65-8a95-4bbd-9bc3-2eedef023b0d)
 
 
 ### Creating the Training Set and the Test Set
 
 ```python
-y
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 1)
+
 ```
 
-![image](https://github.com/user-attachments/assets/d3f2c9bd-7f40-4ef5-b80f-253894a938ab)
+```python
+X_train
+X_test
+y_train
+y_test
 
+```
+
+* Feature Scaling
+
+```python
+from sklearn.preprocessing import StandardScaler
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+
+```
+
+```python
+X_train
+
+```
+
+
+## Part-2 Building and training the model
