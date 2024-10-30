@@ -406,7 +406,14 @@ from sklearn.metrics import confusion_matrix
 
 # Summary
 
+# Linear Regression
+
+
+# Logistic Regression
+
 ## Variable Importance Analysis base on Accuracy
+
+### Age
 
 ![alt text](<Image Resources/AGE1.png>)
 
@@ -414,6 +421,8 @@ from sklearn.metrics import confusion_matrix
 ![alt text](<Image Resources/Age 2.png>)
 
 $ Explanation $
+
+### Tenure
 
 
 
