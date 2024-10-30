@@ -19,16 +19,16 @@ except Exception as e:
 
 # Create the main window
 root = tk.Tk()
-root.title("Checkbox Example")
+root.title("Customer Churn Prediction")
 root.attributes('-fullscreen', True)  # Set the window to full screen
 root.configure(bg="#e6f7ff")  # Light blue background
 
 # Label to display prediction results
-prediction_label = tk.Label(root, text="", bg="#e6f7ff", font=("Arial", 12, "bold"))
+prediction_label = tk.Label(root, text="", bg="#e6f7ff", font=("Arial", 14, "bold"), fg="#2c3e50")
 prediction_label.pack(side=tk.LEFT, padx=20, pady=10)
 
 # Label to display accuracy score
-accuracy_label = tk.Label(root, text="", bg="#e6f7ff", font=("Arial", 10))
+accuracy_label = tk.Label(root, text="", bg="#e6f7ff", font=("Arial", 12), fg="#2c3e50")
 accuracy_label.pack(side=tk.LEFT, padx=20, pady=10)
 
 # Placeholder for the confusion matrix canvas
@@ -93,10 +93,10 @@ def continue_action():
     ax.matshow(cm, cmap=plt.cm.Blues, alpha=0.6)
     for i in range(cm.shape[0]):
         for j in range(cm.shape[1]):
-            ax.text(x=j, y=i, s=cm[i, j], va='center', ha='center')
+            ax.text(x=j, y=i, s=cm[i, j], va='center', ha='center', color='black', fontweight='bold')
 
-    plt.xlabel('Predicted Labels')
-    plt.ylabel('True Labels')
+    plt.xlabel('Predicted Labels', fontsize=12, fontweight='bold')
+    plt.ylabel('True Labels', fontsize=12, fontweight='bold')
 
     # Embed the confusion matrix plot in the Tkinter window
     canvas = FigureCanvasTkAgg(fig, master=root)
@@ -112,14 +112,14 @@ def continue_action():
         # Create text boxes for user input for selected options
         user_input = []
         for option in selected_options:
-            label = tk.Label(text_frame, text=f"Enter value for {option}:", bg="#e6f7ff", font=("Arial", 10))
+            label = tk.Label(text_frame, text=f"Enter value for {option}:", bg="#e6f7ff", font=("Arial", 12), fg="#34495e")
             label.pack(anchor='w', padx=10, pady=2)
-            entry = tk.Entry(text_frame, width=30)
+            entry = tk.Entry(text_frame, width=30, font=("Arial", 12))
             entry.pack(anchor='w', padx=10, pady=2)
             user_input.append(entry)
 
         # Create a button to predict based on user input
-        predict_button = tk.Button(text_frame, text="Predict", command=lambda: predict_value(user_input), bg="#66b3ff", fg="white", font=("Arial", 12))
+        predict_button = tk.Button(text_frame, text="Predict", command=lambda: predict_value(user_input), bg="#66b3ff", fg="white", font=("Arial", 12), relief='raised')
         predict_button.pack(anchor='w', padx=10, pady=10)
 
 def predict_value(user_input):
@@ -136,7 +136,7 @@ def predict_value(user_input):
     prediction = model.predict(input_array_scaled)
 
     # Display the prediction result
-    prediction_label.config(text=f"Churn Prediction: {prediction[0]:.2f}")
+    prediction_label.config(text=f"Churn Prediction: {prediction[0]}")
 
 # Function to minimize the window
 def minimize_window():
@@ -194,7 +194,7 @@ continue_button = tk.Button(root, text="Continue", command=continue_action, bg="
 continue_button.pack(side=tk.LEFT, padx=20, pady=10)
 
 # Add a decorative label at the top and anchor it to the left
-title_label = tk.Label(root, text="Logistic Regression: Customer Churn Prediction", bg="#e6f7ff", font=("Arial", 14, "bold"))
+title_label = tk.Label(root, text="Logistic Regression: Customer Churn Prediction", bg="#e6f7ff", font=("Arial", 16, "bold"), fg="#2c3e50")
 title_label.pack(anchor='w', padx=20, pady=10)
 
 # Start the Tkinter event loop

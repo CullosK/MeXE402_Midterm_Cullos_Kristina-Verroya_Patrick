@@ -399,3 +399,22 @@ from sklearn.metrics import confusion_matrix
 ```
 
 ![image](https://github.com/user-attachments/assets/8fac340a-078a-46a1-9747-9156bdbdaf5e)
+
+
+
+
+
+# Summary
+
+## Variable Importance Analysis base on Accuracy
+
+![alt text](<Image Resources/AGE1.png>)
+
+
+![alt text](<Image Resources/Age 2.png>)
+
+$ Explanation $
+
+
+
+
