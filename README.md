@@ -1,4 +1,4 @@
-# Main Branch
+
 # MeXE402_Midterm_Cullos_Kristina-Verroya_Patrick
 ## Introduction: Overview of Linear and Logistic Regression.
 ### Linear Regression
