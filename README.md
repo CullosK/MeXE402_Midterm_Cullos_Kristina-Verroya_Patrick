@@ -424,6 +424,3 @@ $ Explanation $
 
 ### Tenure
 
-
-
-
