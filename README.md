@@ -207,5 +207,22 @@ model.predict([[-122.23,37.84,50,2515,399,970,373,5.8596]])
 #### Predicted Value = $328,762.40
 
 
+## Logistic Regression Data
+### Process
 
+* The original data consist of 64,375 rows and 12 rows. The data is cleaned using Microsoft Excel and 
+* The **rows that are incomplete are completely removed** for more accurate reading.
+* Here are the step by step process on deleting unwanted rows:
 
+   1. Open Your Excel File: Find the rows using **Find and Select** then **Go to Special**.
+      ![Screenshot 2024-10-30 110744](https://github.com/user-attachments/assets/23f20c0d-d00f-4e2e-ac74-d30f9a324146)
+
+   3. Select the **Blanks** to search for empty cell.
+      ![Screenshot 2024-10-30 111851](https://github.com/user-attachments/assets/af9e99ec-0918-4d44-8cb7-a32e6935633d)
+
+   5. Since the result found nothing blank in the data, we can proceed to the next step.
+      ![Screenshot 2024-10-30 112323](https://github.com/user-attachments/assets/3c4607d2-667d-4678-b90b-822556043dad)
+
+# Logisic Regression
+* Logistic Regression present the learning algorithm used for binary classification.
+ 
