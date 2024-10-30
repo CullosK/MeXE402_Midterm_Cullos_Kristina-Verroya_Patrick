@@ -330,3 +330,15 @@ X_train
 
 
 ## Part-2 Building and training the model
+
+### Building the Model
+
+* from sklearn.linear_model import LogisticRegression imports LogisticRegression class.
+
+```python
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression(random_state = 0)
+
+```
+
+### Training the Model
