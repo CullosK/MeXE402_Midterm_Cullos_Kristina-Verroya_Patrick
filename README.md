@@ -65,7 +65,7 @@
 
 
 ## Part 1 - Data Preprocessing
-
+,,,
 
 ### Importing libraries and the datase
 
@@ -156,6 +156,7 @@ y_test
 
 
 ## Part 2 - Building and training the model
+
 ### Building the model
 
 * from sklearn.linear_model import LinearRegression imports the LinearRegression class.
