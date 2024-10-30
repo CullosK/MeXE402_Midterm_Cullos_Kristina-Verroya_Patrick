@@ -3,52 +3,52 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
-import matplotlib.pyplot as plt
 
 # Load the dataset
-dataset = pd.read_csv('housing.csv')
+dataset = pd.read_csv('housing.csv') 
 
-# Display the first 5 rows of the dataset
-print(dataset.head())
-
-# [rows, columns]
+# Prepare the data
 X = dataset.iloc[:, :-2].values
 y = dataset.iloc[:, -2].values
 
-# Splitting the dataset into the training set and test set
+# Split the dataset into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
-# Fit the linear regression model
+# Create and fit the linear regression model
 model = LinearRegression()
 model.fit(X_train, y_train)
 
-# Predicting the test set results
+# Make predictions
 y_pred = model.predict(X_test)
 
-# Extract median_income from the dataset
-median_income = dataset.iloc[:, -1].values  # Assuming median_income is the last column
+# Calculate the R^2 score
+r2 = r2_score(y_test, y_pred)
 
-# Create a DataFrame for y_pred and median_income
-pred_income_df = pd.DataFrame({'y_pred': y_pred, 'median_income': median_income})
+# Calculate the adjusted R^2 score
+k = X_test.shape[1]
+n = X_test.shape[0]
+adj_r2 = 1 - (1 - r2) * (n - 1) / (n - k - 1)
 
-# Fit a new linear regression model between y_pred and median_income
-income_model = LinearRegression()
-income_model.fit(pred_income_df[['median_income']], pred_income_df['y_pred'])
+# Function to calculate R^2 without a specific feature
+def calculate_r2_without_feature(X, y, feature_index):
+    X_reduced = np.delete(X, feature_index, axis=1)  # Remove the feature
+    X_train_reduced, X_test_reduced, y_train_reduced, y_test_reduced = train_test_split(X_reduced, y, test_size=0.2, random_state=1)
+    model_reduced = LinearRegression()
+    model_reduced.fit(X_train_reduced, y_train_reduced)
+    y_pred_reduced = model_reduced.predict(X_test_reduced)
+    return r2_score(y_test_reduced, y_pred_reduced)
 
-# Predicting y_pred based on median_income
-y_income_pred = income_model.predict(pred_income_df[['median_income']])
+# Calculate R^2 scores for each feature
+feature_importance = {}
+for i in range(X.shape[1]):
+    r2_without_feature = calculate_r2_without_feature(X, y, i)
+    importance = r2 - r2_without_feature
+    feature_importance[f'Feature {i}'] = importance
 
-# Calculate R^2 score for the new model
-income_r2 = r2_score(pred_income_df['y_pred'], y_income_pred)
+# Display feature importances
+for feature, importance in feature_importance.items():
+    print(f'{feature}: {importance:.4f}')
 
-# Print R^2 score for the new model
-print(f'R^2 score for the linear regression model between y_pred and median_income: {income_r2}')
-
-# Optional: Visualize the results
-plt.scatter(pred_income_df['median_income'], pred_income_df['y_pred'], color='blue', label='Predicted Values')
-plt.plot(pred_income_df['median_income'], y_income_pred, color='red', label='Regression Line')
-plt.xlabel('Median Income')
-plt.ylabel('Predicted Housing Prices')
-plt.title('Linear Regression between Predicted Values and Median Income')
-plt.legend()
-plt.show()
+# Optional: Display the overall model R^2 and adjusted R^2
+print(f'Overall R^2: {r2:.4f}')
+print(f'Adjusted R^2: {adj_r2:.4f}')
