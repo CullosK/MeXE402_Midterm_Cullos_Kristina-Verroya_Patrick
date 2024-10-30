@@ -65,7 +65,7 @@
 
 
 ## Part 1 - Data Preprocessing
-,,,
+
 
 ### Importing libraries and the datase
 
