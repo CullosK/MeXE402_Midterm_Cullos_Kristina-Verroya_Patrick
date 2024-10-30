@@ -2,42 +2,53 @@ import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import r2_score
+import matplotlib.pyplot as plt
 
 # Load the dataset
 dataset = pd.read_csv('housing.csv')
-dataset.head()  # Display 5 rows of dataset
 
-# Split dataset into features (X) and target (y)
+# Display the first 5 rows of the dataset
+print(dataset.head())
+
+# [rows, columns]
 X = dataset.iloc[:, :-2].values
 y = dataset.iloc[:, -2].values
 
-# Split into training and testing sets
+# Splitting the dataset into the training set and test set
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=1)
 
-# Standardize the features
-scaler = StandardScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
-
-# Fit the linear regression model on the standardized data
+# Fit the linear regression model
 model = LinearRegression()
-model.fit(X_train_scaled, y_train)
+model.fit(X_train, y_train)
 
-# Predict using the test set
-y_pred = model.predict(X_test_scaled)
+# Predicting the test set results
+y_pred = model.predict(X_test)
 
-# Calculate R-squared and adjusted R-squared
-r2 = r2_score(y_test, y_pred)
-k = X_test.shape[1]
-n = X_test.shape[0]
-adj_r2 = 1 - (1 - r2) * (n - 1) / (n - k - 1)
+# Extract median_income from the dataset
+median_income = dataset.iloc[:, -1].values  # Assuming median_income is the last column
 
-print("R-squared:", r2)
-print("Adjusted R-squared:", adj_r2)
+# Create a DataFrame for y_pred and median_income
+pred_income_df = pd.DataFrame({'y_pred': y_pred, 'median_income': median_income})
 
-# Calculate variable importance using standardized coefficients
-coefficients = model.coef_
-importance = pd.Series(coefficients, index=dataset.columns[:-2]).sort_values(ascending=False)
-print("Variable importance based on standardized coefficients:\n", importance)
+# Fit a new linear regression model between y_pred and median_income
+income_model = LinearRegression()
+income_model.fit(pred_income_df[['median_income']], pred_income_df['y_pred'])
+
+# Predicting y_pred based on median_income
+y_income_pred = income_model.predict(pred_income_df[['median_income']])
+
+# Calculate R^2 score for the new model
+income_r2 = r2_score(pred_income_df['y_pred'], y_income_pred)
+
+# Print R^2 score for the new model
+print(f'R^2 score for the linear regression model between y_pred and median_income: {income_r2}')
+
+# Optional: Visualize the results
+plt.scatter(pred_income_df['median_income'], pred_income_df['y_pred'], color='blue', label='Predicted Values')
+plt.plot(pred_income_df['median_income'], y_income_pred, color='red', label='Regression Line')
+plt.xlabel('Median Income')
+plt.ylabel('Predicted Housing Prices')
+plt.title('Linear Regression between Predicted Values and Median Income')
+plt.legend()
+plt.show()
