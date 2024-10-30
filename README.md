@@ -28,7 +28,6 @@
 
 ## Project Objectives
 
-
 # Methodology
 
 ## Data Cleaning
