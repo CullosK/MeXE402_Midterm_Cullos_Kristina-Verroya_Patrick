@@ -239,4 +239,7 @@ Libraries:
 * **sklearn.linear_model.LinearRegression** - A model from scikit-learn used for **performing linear regression.**
 * **sklearn.metrics.r2_score** - A function from scikit-learn to **evaluate regression model** performance.
 * **matplotlib.pyplot (imported as plt)** - Used to create various **types of charts and plots** to visualize data.
-* **matplotlib.backends.backend_tkagg.FigureCanvasTkAgg** - A matplotlib component that **integrates matplotlib plots into a tkinter** 
+* **matplotlib.backends.backend_tkagg.FigureCanvasTkAgg** - A matplotlib component that **integrates matplotlib plots into a tkinter**
+
+
+```python
