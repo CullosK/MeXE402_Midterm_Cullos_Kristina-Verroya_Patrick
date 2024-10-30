@@ -220,9 +220,9 @@ model.predict([[-122.23,37.84,50,2515,399,970,373,5.8596]])
    3. Select the **Blanks** to search for empty cell.
       ![Screenshot 2024-10-30 111851](https://github.com/user-attachments/assets/af9e99ec-0918-4d44-8cb7-a32e6935633d)
 
-   5. Since the result found nothing blank in the data, we can proceed to the next step.
+   5. Since the result found nothing blank in the data, we can proceed for the data processing.
       ![Screenshot 2024-10-30 112323](https://github.com/user-attachments/assets/3c4607d2-667d-4678-b90b-822556043dad)
 
-# Logisic Regression
+# Logistic Regression
 * Logistic Regression present the learning algorithm used for binary classification.
  
