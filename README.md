@@ -32,7 +32,7 @@
 
 ## Data Cleaning
 
-
+### Linear Yarn?
 ## Linear Regression Data
 ### Process
 * The original data consist of 20641 rows and 10 rows. The data is cleaned using Microsoft Excel and 
