@@ -265,3 +265,21 @@ dataset.head(10)
 
 ```
 ![image](https://github.com/user-attachments/assets/8ec0d376-8ac5-4249-9afa-63dcb3710033)
+
+```python
+dataset.info
+
+```
+![image](https://github.com/user-attachments/assets/4ddc834e-5f96-4a39-8b83-d56b0415a67e)
+
+
+### Getting the Inputs and the Outputs
+
+```python
+X1 = dataset.iloc[:,1:2].values
+X2 = dataset.iloc[:,3:7].values
+X3 = dataset.iloc[:,9:11].values
+X = np.concatenate((X1,X2,X3),1)
+y = dataset.iloc[:,-1].values
+
+```
