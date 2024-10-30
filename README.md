@@ -374,6 +374,8 @@ confusion_matrix(y_test, y_pred)
 (5503+4967)/(5503+4967+1154+1251)
 
 ```
+![image](https://github.com/user-attachments/assets/38b89735-abe9-4a99-bd48-83862f74ead6)
+
 
 ```python
 from sklearn.metrics import accuracy_score
