@@ -112,7 +112,6 @@ dataset.head() #display 5 rows of dataset
 
 
 ```python
-
 # [rows,columns]
 X= dataset.iloc[:,:-9].values
 X
@@ -251,3 +250,18 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import accuracy_score
+
+```
+* Imports the data from logisticff.csv into the dataset variable, enabling data manipulation and analysis in code.
+
+```python
+#variable and this is a function for uploading the dataset
+dataset = pd.read_csv('logisticff.csv')
+
+```
+
+```python
+dataset.head(10)
+
+```
+![image](https://github.com/user-attachments/assets/8ec0d376-8ac5-4249-9afa-63dcb3710033)
