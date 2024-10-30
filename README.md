@@ -26,15 +26,18 @@
 
 ## Dataset Description
 
+### k 
 ## Project Objectives
+
 
 # Methodology
 
 ## Data Cleaning
 
-### Linear Yarn?
+
 ## Linear Regression Data
 ### Process
+* The data sheets contains the house pricinh
 * The original data consist of 20641 rows and 10 rows. The data is cleaned using Microsoft Excel and 
 * The **rows that are incomplete are completely removed** for more accurate reading.
 * Here are the step by step process on deleting unwanted rows
@@ -112,7 +115,7 @@ dataset.head() #display 5 rows of dataset
 
 ```python
 # [rows,columns]
-X= dataset.iloc[:,:-9].values
+X= dataset.iloc[:,:-2].values
 X
 
 ```
@@ -220,6 +223,10 @@ model.predict([[-122.23,37.84,50,2515,399,970,373,5.8596]])
 
    5. Since the result found nothing blank in the data, we can proceed for the data processing.
       ![Screenshot 2024-10-30 112323](https://github.com/user-attachments/assets/3c4607d2-667d-4678-b90b-822556043dad)
+
+
+
+
 
 # Logistic Regression
 * Logistic Regression present the learning algorithm used for binary classification.
