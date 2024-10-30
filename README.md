@@ -225,4 +225,8 @@ model.predict([[-122.23,37.84,50,2515,399,970,373,5.8596]])
 
 # Logistic Regression
 * Logistic Regression present the learning algorithm used for binary classification.
- 
+* This works with numerical inputs, so categorical data (e.g., gender, product type) needs to be encoded. Common techniques include.
+
+## Part-1 Data Processing
+
+### Importing libraries and the datase 
