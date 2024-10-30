@@ -386,45 +386,6 @@ numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix
 
-# Assuming y_test and y_pred are defined earlier in your code
-# y_test = [...]  # Your true labels
-# y_pred = [...]  # Your predicted labels
-
-# Generate confusion matrix
-cm = confusion_matrix(y_test, y_pred)
-
-# Create a figure
-plt.figure(figsize=(6, 4))
-
-# Define tick marks based on unique classes in y_test
-tick_marks = np.arange(len(np.unique(y_test)))
-
-# Add predicted labels above the matrix with added space
-plt.xticks(tick_marks, np.unique(y_test), rotation=0)
-for i in range(len(np.unique(y_test))):
-    plt.text(i, -0.6, str(np.unique(y_test)[i]), ha='center', va='center', fontsize=10)  # Adjusted to -0.6 for more space
-
-# Plot confusion matrix
-plt.imshow(cm, interpolation='nearest', cmap='Blues')
-plt.title('Confusion Matrix', pad=20)  # Add padding above the title
-plt.colorbar()
-
-# Add true labels on the y-axis
-plt.yticks(tick_marks, np.unique(y_test))
-
-# Annotate the confusion matrix with counts
-thresh = cm.max() / 2.
-for i, j in np.ndindex(cm.shape):
-    plt.text(j, i, f'{cm[i, j]}', horizontalalignment='center',
-             color='white' if cm[i, j] > thresh else 'black')
-
-# Correctly label the axes
-plt.ylabel('True label')
-plt.xlabel('Predicted label')
-plt.tight_layout()
-plt.subplots_adjust(top=0.85)  # Adjust space at the top
-plt.show()
-
 ```
 
 ![image](https://github.com/user-attachments/assets/8fac340a-078a-46a1-9747-9156bdbdaf5e)
