@@ -538,7 +538,10 @@ The process provides insights into which variables are driving the model’s per
 - **Payment Delays**: With a high accuracy of 76.93%, Payment Delays stands out as the most influential variable, providing reliable predictive power on its own.
 - **Last Interaction**: With an accuracy of 52.46%, Last Interaction has minimal predictive relevance, indicating it contributes little on its own.
 
-**Conclusion**: While *Payment Delays* shows strong predictive power, most other variables have limited standalone value. To improve model accuracy and robustness, adding more relevant features would likely capture a fuller picture and better support predictions. This approach would refine the model, leveraging each variable’s unique contribution alongside others to achieve more reliable and nuanced outcomes.
+**Conclusion**: 
+* While *Payment Delays* shows strong predictive power, most other variables have limited standalone value.
+* To improve model accuracy and robustness, adding more relevant features would likely capture a fuller picture and better support predictions.
+* This approach would refine the model, leveraging each variable’s unique contribution alongside others to achieve more reliable and nuanced outcomes.
 
 ![image](https://github.com/user-attachments/assets/f750a4b2-f7eb-42ab-ba57-b74077ded53b)
 
