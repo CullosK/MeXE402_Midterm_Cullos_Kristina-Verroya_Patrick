@@ -45,8 +45,7 @@
 
     1. Open Your Excel File: Find the rows using **Find and Select** then **Go to Special**.
 
-    ![alt text](<Image Resources/image4.png>)
-
+   ![alt text](<Image Resources/Go to Special.png>)
 
     2. After selecting **Go to Special**. Select the **Blanks** to search for empty cell.
 
@@ -474,18 +473,24 @@ from sklearn.metrics import confusion_matrix
 ![alt text](<Image Resources/Linear Regresion Image Resources/Total Bedrooms zoom.png>)
 
 ### Populations
+* The negative slope indicates a **minimal negative correlation** between population and housing median value.
+* The downward slope of the line suggests a negative correlation. This means that as the population increases, the target value tends to decrease.
 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Population.png>)
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Population Zoom.png>)
 
 ### Households
 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Households.png>)
 
+![alt text](<Image Resources/Linear Regresion Image Resources/Household Zoom.png>)
+
 ### Median Income
 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Median Incom.png>)
 
-
+![alt text](<Image Resources/Linear Regresion Image Resources/Median Income Zoom.png>)
 
 
 ## 
