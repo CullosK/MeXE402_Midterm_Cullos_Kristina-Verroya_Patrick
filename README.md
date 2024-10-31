@@ -99,23 +99,24 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 ```
 
-* Loads the data from housing.csv into the dataset variable, allowing the data to be manipulated and analyzed in code.
 
 ```python
 #variable and this is a function for uploading the dataset
 dataset = pd.read_csv('housing.csv') 
 
 ```
+* Loads the data from housing.csv into the dataset variable, allowing the data to be manipulated and analyzed in code.
+
 
 ```python
 
 dataset.head() #display 5 rows of dataset
 
-#10,000 rows
-#data points collected from a combined cycle power plant over six years
-#5 columns: AT ambient temp,V exhaust vacuum, AP ambient pressure, RH relative humdity, PE net hourly  electrical energy output
-# independent variables: AT, V, AP and RH
-# dependent variable: PE
+# 20,434 rows
+# Data points collected from a combined cycle power plant over six years
+# 9 columns: longitude, latitude, housing median age, total rooms, total bedrooms, populations, households, median income, median house value
+# independent variables: longitude, latitude, housing median age, total rooms, total bedrooms, populations, households, median income
+# dependent variable:  median house value
 ```
 ![alt text](<Image Resources/image8.png>)
 
