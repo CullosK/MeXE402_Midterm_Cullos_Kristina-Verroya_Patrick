@@ -416,7 +416,38 @@ from sklearn.metrics import confusion_matrix
 
 ## Linear Regression Model Graph of Training Variables
 
+### Longitude
 
+![alt text](<Image Resources/Linear Regresion Image Resources/Longitude.png>)
+
+### Latitude
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Latitude.png>)
+
+
+### Housing Median Age
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Housing Median Age.png>)
+
+### Total Rooms
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Total Rooms.png>)
+
+### Total Bedrooms
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Total Bedrooms.png>)
+
+### Populations
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Population.png>)
+
+### Households
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Households.png>)
+
+### Median Income
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Median Incom.png>)
 
 
 
