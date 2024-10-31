@@ -411,7 +411,17 @@ from sklearn.metrics import confusion_matrix
 
 ## Variable Imporatance Analysis Based on R-squared
 
+* Explanation 
+![alt text](<Image Resources/Linear Regresion Image Resources/Variable Importance Base on R2.png>)
 
+## Linear Regression Model Graph of Training Variables
+
+
+
+
+
+
+## 
 
 # Logistic Regression
 
