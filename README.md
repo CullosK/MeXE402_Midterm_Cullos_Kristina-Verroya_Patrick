@@ -459,7 +459,19 @@ from sklearn.metrics import confusion_matrix
 
 ### Total Bedrooms
 
+* The positive slope indicates a **minimal positive correlation** between total bedrooms and housing median value.
+
+* The spread of data points around the line, especially at higher bedroom counts, shows that the **relationship is weak** and other factors likely influence housing values more.
+
 ![alt text](<Image Resources/Linear Regresion Image Resources/Total Bedrooms.png>)
+
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Totad Bedrooms Highlight.png>)
+
+* There is a slight positive correlation between the number of bedrooms and housing median value, but the relationship is weak.
+* Housing value generally increases with the number of bedrooms, but the data’s spread indicates that other variables may play a more significant role in determining housing value.
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Total Bedrooms zoom.png>)
 
 ### Populations
 
