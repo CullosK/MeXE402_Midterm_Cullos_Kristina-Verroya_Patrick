@@ -424,3 +424,14 @@ $ Explanation $
 
 ### Tenure
 
+
+
+### Usage Frequency
+
+### Support Calls
+
+### Payment Delay
+
+### Total Spend
+
+### Last Interaction
