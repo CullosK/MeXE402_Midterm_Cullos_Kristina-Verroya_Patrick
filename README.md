@@ -458,37 +458,71 @@ from sklearn.metrics import confusion_matrix
 
 ## Variable Importance Analysis base on Accuracy
 
+* "Variable Importance Analysis based on Accuracy" is a method used in machine learning and statistical modeling to evaluate the significance of each input variable in predicting an outcome. Here’s a breakdown of how it works:
+
+   1. Variable Importance: This refers to the contribution of each predictor (or feature) in a model. It shows how much each variable contributes to the model’s accuracy, helping to identify the most influential variables.
+
+   2. Based on Accuracy: This approach measures the importance by assessing how each variable affects the overall model accuracy. Generally, this is done by:
+
+   3. Training the model with all features to get a baseline accuracy.
+       * Then, each variable is "shuffled" (i.e., its values are permuted randomly or temporarily removed).
+       * The model's accuracy is recalculated without that variable, and the drop in accuracy shows the variable's importance: a larger drop indicates a higher importance for that feature.
+       * Interpretation: Variables with the greatest accuracy drop are the most influential, as the model depends heavily on them to make predictions. This method can be particularly useful in tree-based models (e.g., random forests), but can also apply to other machine learning models.
+
+The process provides insights into which variables are driving the model’s performance, which is especially useful for feature selection, model simplification, and interpretation of results.
+
 
 ### Age
 
-* Explanation sa accuracy ng logistic model pag age lang yung basihan 
-
-
+* An accuracy of 57.48% indicates that while age and tenure have some relevance, they are insufficient on their own for strong predictive performance.
 
 ![alt text](<Image Resources/Logistic Image Resources/Age Con. Matrix.png>)
 
 
 ### Tenure
 
+*  The accuracy of 57.48% indicates that while age and tenure have some predictive value, they are insufficient on their own for strong predictive performance.
+*  The model might benefit from exploring additional variables to improve accuracy.
+
 ![alt text](<Image Resources/Logistic Image Resources/Tenure Con.png>)
 
 
 ### Usage Frequency
 
+* An accuracy of 54.71% shows that Usage Frequency contributes minimally and is insufficient on its own for strong predictive performance.
+* Additional features would likely improve the model’s accuracy.
+
 ![alt text](<Image Resources/Logistic Image Resources/Usage Freq. Con.png>)
+
 
 ### Support Calls
 
+* An accuracy of 64.47% indicates that Support Calls has moderate predictive value, suggesting some correlation with the target outcome.
+* While useful as a baseline, including additional features would likely improve the model's accuracy and reliability.
+
 ![alt text](<Image Resources/Logistic Image Resources/Support Calls Con.png>)
+
 
 ### Payment Delays
 
+* An accuracy of 76.93% indicates that Payment Delays is a strong predictor of the outcome, providing reliable insights on its own.
+* However, adding other relevant features could help refine the model for even greater accuracy and nuanced predictions.
+
 ![alt text](<Image Resources/Logistic Image Resources/payment delays con.png>)
+
 
 ### Total Spend
 
+* An accuracy of 54.27% suggests that while Total Spend has a slight correlation with the target outcome.
+* It is insufficient on its own for strong predictive power.
+* Additional features would likely be necessary for a more accurate and robust model.
+
 ![alt text](<Image Resources/Logistic Image Resources/total spent con.png>)
 
+
 ### Last Interaction
+
+* An accuracy of 52.46% indicates that Last Interaction has very little predictive power by itself.
+* And including additional features would likely be necessary to achieve a model with practical predictive accuracy.
 
 ![alt text](<Image Resources/Logistic Image Resources/Last  Interaction Con.png>)
