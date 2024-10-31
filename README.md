@@ -526,3 +526,19 @@ The process provides insights into which variables are driving the model’s per
 * And including additional features would likely be necessary to achieve a model with practical predictive accuracy.
 
 ![alt text](<Image Resources/Logistic Image Resources/Last  Interaction Con.png>)
+
+
+# Conclusion
+
+* In summary, each variable individually contributes to predicting the outcome, but with varying levels of accuracy and predictive power:
+
+- **Age and Tenure**: Achieving an accuracy of 57.48%, these variables have some predictive relevance but are insufficient alone for robust predictions.
+- **Usage Frequency** and **Total Spend**: With accuracies of 54.71% and 54.27% respectively, these variables provide only minimal predictive value, suggesting they capture limited patterns related to the outcome.
+- **Support Calls**: At 64.47% accuracy, Support Calls is a moderately strong predictor, offering some baseline insight. However, further improvements are expected with additional variables.
+- **Payment Delays**: With a high accuracy of 76.93%, Payment Delays stands out as the most influential variable, providing reliable predictive power on its own.
+- **Last Interaction**: With an accuracy of 52.46%, Last Interaction has minimal predictive relevance, indicating it contributes little on its own.
+
+**Conclusion**: While *Payment Delays* shows strong predictive power, most other variables have limited standalone value. To improve model accuracy and robustness, adding more relevant features would likely capture a fuller picture and better support predictions. This approach would refine the model, leveraging each variable’s unique contribution alongside others to achieve more reliable and nuanced outcomes.
+
+![image](https://github.com/user-attachments/assets/f750a4b2-f7eb-42ab-ba57-b74077ded53b)
+
