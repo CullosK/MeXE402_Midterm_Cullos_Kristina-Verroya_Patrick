@@ -149,7 +149,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= 0.2,random_
 ```
 
 
-Defining X and Y training and testing variables.
+
 
 ```python
 
@@ -158,9 +158,8 @@ X_test
 y_train
 y_test
 
-
 ```
-
+* Defining X and Y training and testing variables.
 
 ## Part 2 - Building and training the model
 
@@ -185,27 +184,25 @@ model = LinearRegression()
 # fit is a method inside LinearRegression class - they are like functions.
 model.fit(X_train, y_train)
 
-
 ```
-
+* Fitting the value of x_train and y_train for linear refression model
 ![alt text](<Image Resources/image.png>)
 
 
 ### Inference
+* Predicting
 
 ```python
 y_pred = model.predict(X_test)
 y_pred
 ```
+* y_pred is used in the predicting with x_test as the x variables
 
 ### Making the prediction of a single data point with Longitude = -122.23, Latitude = 37.84, Housing Median Age = 50, Total rooms = 2515, Total Bedrooms = 399 , Populations = 970, Households = 373, Median Income = 5.8596
 
 #### Test Sample (Row No. 120) = -122.23,37.84,50,2515,399,970,373,5.8596
 ![alt text](<Image Resources/image3.png>)
-
-
 #### Actual Value = $327,600
-
 
 
 ### Prediction Model
@@ -215,6 +212,24 @@ model.predict([[-122.23,37.84,50,2515,399,970,373,5.8596]])
 ```
 
 #### Predicted Value = $328,762.40
+
+## Part 3: Evaluating the Model
+* Evaluating how effective the model is:
+
+### R-Squared
+```python
+from sklearn.metrics import r2_score
+r2 = r2_score(y_test, y_pred)
+r2
+```
+
+### Adjusted R-Squared
+```python
+k = X_test.shape[1]
+n = X_test.shape[0]
+adj_r2 = 1-(1-r2)*(n-1)/(n-k-1)
+adj_r2
+```
 
 
 ## Logistic Regression Data
