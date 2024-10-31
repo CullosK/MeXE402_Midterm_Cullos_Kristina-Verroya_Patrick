@@ -418,6 +418,9 @@ from sklearn.metrics import confusion_matrix
 
 ### Longitude
 
+* The regression line doesn’t capture much variability in the data points, showing a poor fit.
+* This suggests that longitude alone is not a strong predictor of housing value in this dataset.
+
 ![alt text](<Image Resources/Linear Regresion Image Resources/Longitude.png>)
 
 ### Latitude
