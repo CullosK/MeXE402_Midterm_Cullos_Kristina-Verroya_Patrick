@@ -426,19 +426,36 @@ from sklearn.metrics import confusion_matrix
 ![alt text](<Image Resources/Linear Regresion Image Resources/Longitude.png>)
 
 ### Latitude
-* The regression line does not capture much of the data variability, with data points spread widely around it.
-* This suggests that latitude alone is not a strong predictor of housing value in this dataset.
+* The regression line **does not capture much of the data variability**, with data points spread widely around it.
+* This suggests that latitude alone is **not a strong predictor** of housing value in this dataset.
+* A **minor negative trend** exists between latitude and housing value.
+* High variability at each latitude suggests that **other factors likely play a more significant role** in determining housing values.
 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Latitude.png>)
 
 
 ### Housing Median Age
+* The regression line captures only a **minor trend**, with a **lot of spread** around it, indicating **weak predictive power**.
+* This suggests that housing age alone **does not strongly predict housing value.**
+* There is a **minor positive trend** between housing age and value.
+* Significant data spread at each age suggests **other factors are likely more influential** in determining housing values.
 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Housing Median Age.png>)
 
 ### Total Rooms
 
+* There is a positive correlation between total rooms and housing value, though it is relatively weak.
 ![alt text](<Image Resources/Linear Regresion Image Resources/Total Rooms.png>)
+
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Total Rooms Highlight.png>)'
+
+
+* The upward trend in the regression line indicates a **moderate positive correlation** between total rooms and housing value.
+* A higher number of rooms generally corresponds to a higher housing value, but many exceptions are observed in the data distribution.
+![alt text](<Image Resources/Linear Regresion Image Resources/Total Rooms Zoom.png>)
+
+
 
 ### Total Bedrooms
 
