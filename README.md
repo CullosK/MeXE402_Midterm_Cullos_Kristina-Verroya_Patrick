@@ -332,6 +332,7 @@ X_train = sc.fit_transform(X_train)
 ```
 
 ```python
+
 X_train
 
 ```
@@ -407,6 +408,9 @@ from sklearn.metrics import confusion_matrix
 # Summary
 
 # Linear Regression
+
+## Variable Imporatance Analysis Based on R-squared
+
 
 
 # Logistic Regression
