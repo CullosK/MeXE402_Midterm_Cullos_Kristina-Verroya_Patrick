@@ -25,21 +25,31 @@
 
 • Assumptions: Independence of observations, linearity of independent variables and log-odds, and large sample size (for reliable results).
 
-## Dataset Description
+# Dataset Description
 
-### k 
-## Project Objectives
+## Dataset used in Linear Regression
+* The data used in Linear Regression is named **"housing.csv"**.
+* The original data consist of 20641 rows and 10 rows.
 
+
+## Dataset used in Linear Regression
+* The data used in Logistic Regression is named **"customer_churn_dataset-testing-master.csv"** and later renamed to **"logistic.csv"**.
+* The original data consist of 64,735 rows and 12 rows.
+* The Following Columns are removed to the dataset: Customer Id, Gender, Subscription Type, and Contract Length.
+![alt text](<Image Resources/Logistic Image Resources/logistic_removed.png>)
+* After the process, the data set used consist of **64,735 rows and 8 rows.**
+
+# Project Objectives
+* To create a machine learning model using linear regression model with and R-squared between 0.50 to 0.99 .
+* To create a machine learning model using logistic regression model with at least 75% Accuracy.
+* To analyze the importance of each individual variable to the outcome of linear and logistic model prediction,
 
 # Methodology
 
-## Data Cleaning
+## Data Cleaning Process
 
-
-## Linear Regression Data
-### Process
 * The data sheets contains the house pricinh
-* The original data consist of 20641 rows and 10 rows. The data is cleaned using Microsoft Excel and 
+*  The data is cleaned using Microsoft Excel and 
 * The **rows that are incomplete are completely removed** for more accurate reading.
 * Here are the step by step process on deleting unwanted rows
 
@@ -57,16 +67,13 @@
 
 * Deleted rows are rows 292 and 342
   
-# Linear Regression
-* Linear regression models the relationship between a dependent variable and one or more independent variables.
-* The model aims to fit a line (or hyperplane for multiple variables) that minimizes the error between predicted and actual values.
 
 
 
 ## Part 1 - Data Preprocessing
 
 
-### Importing libraries and the datase
+## Importing libraries and the datase
 
 Libraries:
 * **tkinter** - Python’s standard **GUI (Graphical User Interface) library**.
