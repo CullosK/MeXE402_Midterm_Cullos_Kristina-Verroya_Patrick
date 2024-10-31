@@ -415,23 +415,35 @@ from sklearn.metrics import confusion_matrix
 
 ### Age
 
-![alt text](<Image Resources/AGE1.png>)
-
-
-![alt text](<Image Resources/Age 2.png>)
 
 $ Explanation $
 
+
+
+![alt text](<Image Resources/Logistic Image Resources/Age Con. Matrix.png>)
+
+
 ### Tenure
 
+![alt text](<Image Resources/Logistic Image Resources/Tenure Con.png>)
 
 
 ### Usage Frequency
 
+![alt text](<Image Resources/Logistic Image Resources/Usage Freq. Con.png>)
+
 ### Support Calls
 
-### Payment Delay
+![alt text](<Image Resources/Logistic Image Resources/Support Calls Con.png>)
+
+### Payment Delays
+
+![alt text](<Image Resources/Logistic Image Resources/payment delays con.png>)
 
 ### Total Spend
 
+![alt text](<Image Resources/Logistic Image Resources/total spent con.png>)
+
 ### Last Interaction
+
+![alt text](<Image Resources/Logistic Image Resources/Last  Interaction Con.png>)
