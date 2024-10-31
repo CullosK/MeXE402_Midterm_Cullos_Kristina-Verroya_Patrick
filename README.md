@@ -45,7 +45,7 @@
 * To analyze the importance of each individual variable to the outcome of linear and logistic model prediction,
 
 # Methodology
-
+# Linear Regression
 ## Data Cleaning Process
 
 * The data sheets contains the house pricinh
@@ -232,8 +232,56 @@ adj_r2
 ```
 
 
+## Part 4 Data Interpretation
+
+### Linear Regression Model Graph of Training Variables
+
+* Relationship between x_train and y_train
+* visual representation of the:
+    * `python model = LinearRegression() model.fit(X_train, y_train)`
+    * Linear regression model between each independent variable with relation to dependent variable.
+    
+
+
+## Longitude
+```python
+# Plotting the linear regression
+feature_index = 0  # Change this index to visualize other features
+X_feature_train = X_train[:, feature_index]
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+sns.regplot(x=X_feature_train, y=y_train, scatter_kws={'alpha': 0.5}, line_kws={'color': 'red'})
+plt.xlabel('Longitude')  # Label for the chosen feature
+plt.ylabel('Target Value')  # Label for the target variable
+plt.title('Linear Regression: Training Data')  # Title for the plot
+plt.grid()
+
+# Set y-axis limit
+plt.ylim(0, 500000)  # Set y-axis limit from 0 to 500,000
+plt.show()
+```
+* This code shows or plot the linear regression between dependent variables and median house value.
+* "feature_index" values are set from 0 to 6 to obtain individual variable results.
+   * feature_index = 0 - Longitude
+   * feature_index = 1 - Latitude
+   * feature_index = 2 - Housing Median Age
+   * feature_index = 3 - Total Rooms
+   * feature_index = 4 - Total Bedrooms
+   * feature_index = 5 - Population
+   * feature_index = 6 - Median Income
+
+* plt.xlim() is also used to adjust the range of the x-axis for better data viewing
+
+
+
+
+
+
+
 ## Logistic Regression Data
 ### Process
+
 
 * The original data consist of 64,375 rows and 12 rows. The data is cleaned using Microsoft Excel and 
 * The **rows that are incomplete are completely removed** for more accurate reading.
@@ -516,7 +564,11 @@ from sklearn.metrics import confusion_matrix
 ![alt text](<Image Resources/Linear Regresion Image Resources/Median Income Zoom.png>)
 
 
-## 
+## Training vs Testing
+* Scatter Plot shows how the training and testing variable are plot wiith respect to each other.
+   * Blue - Training Data
+   * Orange - Testing Data
+![alt text](<Image Resources/Linear Regresion Image Resources/Training vs Testing Predictions.png>)
 
 # Logistic Regression
 
