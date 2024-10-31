@@ -412,11 +412,11 @@ from sklearn.metrics import confusion_matrix
 # Logistic Regression
 
 ## Variable Importance Analysis base on Accuracy
+* Lalagyan ng Explanation
 
 ### Age
 
-
-$ Explanation $
+* Explanation sa accuracy ng logistic model pag age lang yung basihan 
 
 
 
