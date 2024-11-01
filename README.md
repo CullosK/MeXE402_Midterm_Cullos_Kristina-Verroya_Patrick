@@ -34,14 +34,14 @@
 
 ## Dataset used in Linear Regression
 * The data used in Logistic Regression is named **"customer_churn_dataset-testing-master.csv"** and later renamed to **"logistic.csv"**.
-* The original data consist of 64,735 rows and 12 rows.
-* The Following Columns are removed to the dataset: Customer Id, Gender, Subscription Type, and Contract Length.
+* The original data consists of 64,735 rows and 12 rows.
+* The Following Columns are removed from the dataset: Customer ID, Gender, Subscription Type, and Contract Length.
 ![alt text](<Image Resources/Logistic Image Resources/logistic_removed.png>)
 * After the process, the data set used consist of **64,735 rows and 8 rows.**
 
 # Project Objectives
-* To create a machine learning model using linear regression model with and R-squared between 0.50 to 0.99 .
-* To create a machine learning model using logistic regression model with at least 75% Accuracy.
+* To create a machine learning model using a linear regression model with an R-squared between 0.50 to 0.99.
+* To create a machine learning model using a logistic regression model with at least 75% Accuracy.
 * To analyze the importance of each individual variable to the outcome of linear and logistic model prediction,
 
 # Methodology
@@ -57,7 +57,7 @@
 
    ![alt text](<Image Resources/Go to Special.png>)
 
-    2. After selecting **Go to Special**. Select the **Blanks** to search for empty cell.
+    2. After selecting **Go to Special**. Select the **Blanks** to search for an empty cell.
 
     ![alt text](<Image Resources/image6.png>)
 
@@ -73,7 +73,7 @@
 ## Part 1 - Data Preprocessing
 
 
-## Importing libraries and the datase
+## Importing libraries and the dataset
 
 Libraries:
 * **tkinter** - Python’s standard **GUI (Graphical User Interface) library**.
@@ -170,7 +170,7 @@ y_test
 ```python
 
 # linear_model is the module
-# `LinearRegression is a class` is defining that `LinearRegression` is a class within the `linear_model` module. It indicates that `LinearRegression` is a blueprint or template for creating objects that represent linear regression models.
+# `LinearRegression is a class` defines that `LinearRegression` is a class within the `linear_model` module. It indicates that `LinearRegression` is a blueprint or template for creating objects that represent linear regression models.
 # Class is a pre-coded blueprint of something we want to build from which objects are created.
 from sklearn.linear_model import LinearRegression
 model = LinearRegression()
@@ -239,9 +239,9 @@ adj_r2
 * Relationship between x_train and y_train
 * visual representation of the:
     * `python model = LinearRegression() model.fit(X_train, y_train)`
-    * Linear regression model between each independent variable with relation to dependent variable.
+    * Linear regression model between each independent variable in relation to the dependent variable.
     
-## Dependent Variable and Independent Varianle Linear Regression Model 
+## Dependent Variable and Independent Variable Linear Regression Model 
 ```python
 # Plotting the linear regression
 feature_index = 0  # Change this index to visualize other features
@@ -260,7 +260,7 @@ plt.ylim(0, 500000)  # Set y-axis limit from 0 to 500,000
 plt.show()
 ```
 
-* This code shows or plot the linear regression between independent variables and median house value.
+* This code shows or plots the linear regression between independent variables and median house value.
 * "feature_index" values are set from 0 to 6 to obtain individual variable results.
    * feature_index = 0 - Longitude
    * feature_index = 1 - Latitude
@@ -279,12 +279,12 @@ plt.show()
 
 
 ## Logistic Regression Data
-### Process
+### Data Cleaning Process
 
 
-* The original data consist of 64,375 rows and 12 rows. The data is cleaned using Microsoft Excel and 
+* The original data consists of 64,375 rows and 12 rows. The data is cleaned using Microsoft Excel and 
 * The **rows that are incomplete are completely removed** for more accurate reading.
-* Here are the step by step process on deleting unwanted rows:
+* Here is the step by step process for deleting unwanted rows:
 
    1. Open Your Excel File: Find the rows using **Find and Select** then **Go to Special**.
       ![Screenshot 2024-10-30 110744](https://github.com/user-attachments/assets/23f20c0d-d00f-4e2e-ac74-d30f9a324146)
@@ -300,10 +300,10 @@ plt.show()
 
 
 # Logistic Regression
-* Logistic Regression present the learning algorithm used for binary classification.
+* Logistic Regression presents the learning algorithm used for binary classification.
 * This works with numerical inputs, so categorical data (e.g., gender, product type) needs to be encoded. Common techniques include.
 
-## Part-1 Data Processing
+## Part-1
 
 ### Importing libraries and the dataset
 
@@ -329,11 +329,11 @@ from sklearn.metrics import accuracy_score
 
 ```
 
-* Imports the data from logisticff.csv into the dataset variable, enabling data manipulation and analysis in code.
+* Imports the data from logistic.csv into the dataset variable, enabling data manipulation and analysis in code.
 
 ```python
 #variable and this is a function for uploading the dataset
-dataset = pd.read_csv('logisticff.csv')
+dataset = pd.read_csv('logistic.csv')
 
 ```
 
@@ -436,7 +436,7 @@ y_pred
 
 ```
 
-### Making the prediction with the following variables:
+### Predicting with the following variables:
 
 #### Row 27241
 
@@ -489,7 +489,7 @@ from sklearn.metrics import confusion_matrix
 ## Part 4 Data Visualiziation
 
 ### Overall Accuracy and Confusion Matrix
-* This is code is used for the representation of overall accuracy and confusion matrix.
+* This code is used for the representation of the overall accuracy and confusion matrix.
 
 ```python
 
@@ -552,7 +552,7 @@ plt.show()
 
 
 ### Individual Accuracy of Variables and Confusion Matrix
-* This is code is used for the representation of individual accuracy and confusion matrix.
+* This code is used to represent individual accuracy and confusion matrix.
 * 
 ```python
 X = dataset.iloc[:,0:1].values
@@ -664,7 +664,7 @@ plt.show()
 # Summary
 # Linear Regression
 
-## Variable Imporatance Analysis Based on R-squared
+## Variable Importance Analysis Based on R-squared
 
 * Explanation 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Variable Importance Base on R2.png>)
@@ -757,13 +757,13 @@ plt.show()
 
 # Logistic Regression
 
-## Variable Importance Analysis base on Accuracy
+## Variable Importance Analysis based on Accuracy
 
 * "Variable Importance Analysis based on Accuracy" is a method used in machine learning and statistical modeling to evaluate the significance of each input variable in predicting an outcome. Here’s a breakdown of how it works:
 
    1. Variable Importance: This refers to the contribution of each predictor (or feature) in a model. It shows how much each variable contributes to the model’s accuracy, helping to identify the most influential variables.
 
-   2. Based on Accuracy: This approach measures the importance by assessing how each variable affects the overall model accuracy. Generally, this is done by:
+   2. Based on Accuracy: This approach measures the importance of assessing how each variable affects the overall model accuracy. Generally, this is done by:
 
    3. Training the model with all features to get a baseline accuracy.
        * Then, each variable is "shuffled" (i.e., its values are permuted randomly or temporarily removed).
@@ -840,7 +840,7 @@ The process provides insights into which variables are driving the model’s per
 - **Last Interaction**: With an accuracy of 52.46%, Last Interaction has minimal predictive relevance, indicating it contributes little on its own.
 
 **Conclusion**: 
-* While *Payment Delays* shows strong predictive power, most other variables have limited standalone value.
+* While *Payment Delays* show strong predictive power, most other variables have limited standalone value.
 * To improve model accuracy and robustness, adding more relevant features would likely capture a fuller picture and better support predictions.
 * This approach would refine the model, leveraging each variable’s unique contribution alongside others to achieve more reliable and nuanced outcomes.
 
