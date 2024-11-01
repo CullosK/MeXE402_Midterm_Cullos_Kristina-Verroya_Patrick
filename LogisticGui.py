@@ -12,7 +12,7 @@ sc = StandardScaler()
 
 # Load the dataset
 try:
-    dataset = pd.read_csv('logisticff.csv')
+    dataset = pd.read_csv('logistic.csv')
 except Exception as e:
     print(f"Error loading dataset: {e}")
     dataset = None  # Set dataset to None if loading fails
