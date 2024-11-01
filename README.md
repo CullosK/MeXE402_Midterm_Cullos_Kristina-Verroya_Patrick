@@ -653,6 +653,8 @@ plt.show()
    6. Total Spend = 313
    7. Last Interaction = 3
 
+![alt text](<Image Resources/Logistic Image Resources/Logistic Regression Interference.png>)
+
 * Actual
    *Churn = 1 
 * Model Prediction
