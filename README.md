@@ -6,8 +6,6 @@
 
 • Types: Simple Linear Regression that uses one independent variable and Multiple Linear Regression that uses more than one independent variable.
 
-• Goal: To minimize the sum of squared residuals (differences between observed and predicted values) to find the best-fitting line, typically using methods like Ordinary Least Squares (OLS).
-
 • Applications: Linear regression is used to predict housing prices based on features like size, location, and amenities and also to estimate stock prices based on market variables.
 
 • Assumptions: Linearity between independent and dependent variables, independence of errors, homoscedasticity (constant variance of errors), and normality of residuals.
@@ -18,8 +16,6 @@
 • Decision Boundary: By default, probabilities greater than 0.5 are classified as 1, and those below 0.5 as 0.
 
 • Types: Binary Logistic Regression that predicts between two classes (0 or 1), Multinomial Logistic Regression that extend for more than two classes, and Ordinal Logistic Regression that predicts ordered outcomes.
-
-• Goal: It's goal is to find the best parameters to maximize the likelihood of correctly classifying observations, typically using methods like Maximum Likelihood Estimation (MLE).
 
 • Applications: Predicting whether a customer will purchase a product (yes/no) or for medical diagnosis (e.g., disease present or not) is the application of logistic regression.
 
@@ -42,7 +38,7 @@
 # Project Objectives
 * To create a machine learning model using a linear regression model with an R-squared between 0.50 to 0.99.
 * To create a machine learning model using a logistic regression model with at least 75% Accuracy.
-* To analyze the importance of each individual variable to the outcome of linear and logistic model prediction,
+* To analyze the importance of each variable to the outcome of linear and logistic model prediction,
 
 # Methodology
 # Linear Regression
