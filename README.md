@@ -232,7 +232,7 @@ adj_r2
 ```
 
 
-## Part 4 Data Interpretation
+## Part 4 Data Visualiziation
 
 ### Linear Regression Model Graph of Training Variables
 
@@ -241,9 +241,7 @@ adj_r2
     * `python model = LinearRegression() model.fit(X_train, y_train)`
     * Linear regression model between each independent variable with relation to dependent variable.
     
-
-
-## Longitude
+## Dependent Variable and Independent Varianle Linear Regression Model 
 ```python
 # Plotting the linear regression
 feature_index = 0  # Change this index to visualize other features
@@ -261,7 +259,8 @@ plt.grid()
 plt.ylim(0, 500000)  # Set y-axis limit from 0 to 500,000
 plt.show()
 ```
-* This code shows or plot the linear regression between dependent variables and median house value.
+
+* This code shows or plot the linear regression between independent variables and median house value.
 * "feature_index" values are set from 0 to 6 to obtain individual variable results.
    * feature_index = 0 - Longitude
    * feature_index = 1 - Latitude
@@ -308,7 +307,7 @@ plt.show()
 
 ### Importing libraries and the dataset
 
-Libraries:
+### **Libraries:**
 * **tkinter** - Python’s standard **GUI (Graphical User Interface) library**.
 * **pandas**  - Provides DataFrame and Series objects for handling and **analyzing data in tabular** (spreadsheet-like) form.
 * **numpy** - Numerical computing library used for handling arrays and performing **mathematical operations.**
@@ -429,12 +428,30 @@ model.fit(X_train, y_train)
 
 ### Inference
 
-* Making the predictons of the data points in the test set.
+* Making the predictons 
   
 ```python
 y_pred = model.predict(sc.transform(X_test))
 y_pred
 
+```
+
+### Making the prediction with the following variables:
+
+#### Row 27241
+
+1. Age = 42
+2. Tenure = 46
+3. Usage Frequency = 10
+4. Support Calls = 0
+5. Payment Delays = 26
+6. Total Spend = 313
+7. Last Interaction = 3
+
+```python
+#42,46,10,0,26,313,3
+# Actual Churn Prediction = 1
+model.predict(sc.transform([[42,46,10,0,26,313,3]]))
 ```
 
 ## Part-3 Evaluating the model
@@ -469,14 +486,180 @@ from sklearn.metrics import confusion_matrix
 
 ```
 
+## Part 4 Data Visualiziation
+
+### Overall Accuracy and Confusion Matrix
+* This is code is used for the representation of overall accuracy and confusion matrix.
+
+```python
+
+# Importing Libraries
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.metrics import confusion_matrix, accuracy_score
+
+# Assuming y_test and y_pred are defined earlier in your code
+# y_test = [...]  # Your true labels
+# y_pred = [...]  # Your predicted labels
+
+# Generate confusion matrix
+cm = confusion_matrix(y_test, y_pred)
+
+# Calculate accuracy as a percentage
+accuracy = accuracy_score(y_test, y_pred) * 100
+
+# Set up the figure
+plt.figure(figsize=(8, 6))
+
+# Plot the confusion matrix with a more refined color map and style
+plt.imshow(cm, interpolation='nearest', cmap='Blues')
+plt.title('Confusion Matrix', fontsize=20, weight='bold', pad=20)
+plt.suptitle(f'Accuracy: {accuracy:.2f}%', fontsize=16, color='darkslategray', weight='bold', y=0.92)
+
+# Define tick marks based on the number of unique classes
+tick_marks = np.arange(len(np.unique(y_test)))
+plt.xticks(tick_marks, np.unique(y_test), fontsize=12, weight='bold')
+plt.yticks(tick_marks, np.unique(y_test), fontsize=12, weight='bold')
+
+# Set labels for the axes with bold fonts
+plt.ylabel('True Label', fontsize=14, weight='bold', labelpad=15)
+plt.xlabel('Predicted Label', fontsize=14, weight='bold', labelpad=15)
+
+# Annotate each cell in the confusion matrix with the count
+thresh = cm.max() / 2
+for i, j in np.ndindex(cm.shape):
+    plt.text(j, i, f'{cm[i, j]}', ha='center', va='center',
+             color='white' if cm[i, j] > thresh else 'black',
+             fontsize=14, fontweight='bold')
+
+# Customize color bar for a subtle, integrated look
+cbar = plt.colorbar(fraction=0.046, pad=0.04)
+cbar.ax.tick_params(labelsize=10)
+
+# Minor gridlines for a polished separation of cells
+plt.gca().set_xticks(np.arange(-.5, len(tick_marks)), minor=True)
+plt.gca().set_yticks(np.arange(-.5, len(tick_marks)), minor=True)
+plt.grid(which='minor', color='gray', linestyle='-', linewidth=0.5)
+plt.tick_params(which='minor', bottom=False, left=False)  # Hide minor ticks
+
+# Adjust layout for a clean, professional look
+plt.tight_layout(rect=[0, 0, 1, 0.9])
+plt.show()
+```
+
 ![image](https://github.com/user-attachments/assets/8fac340a-078a-46a1-9747-9156bdbdaf5e)
 
 
 
+### Individual Accuracy of Variables and Confusion Matrix
+* This is code is used for the representation of individual accuracy and confusion matrix.
+* 
+```python
+X = dataset.iloc[:,0:1].values
+y = dataset.iloc[:,-1].values
 
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 1)
+
+from sklearn.preprocessing import StandardScaler 
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+model.fit(X_train, y_train)
+y_pred = model.predict(sc.transform(X_test))
+
+cm = confusion_matrix(y_test, y_pred)
+
+# Calculate accuracy as a percentage
+accuracy = accuracy_score(y_test, y_pred) * 100
+
+# Set up the figure
+plt.figure(figsize=(8, 6))
+
+# Plot the confusion matrix with a more refined color map and style
+plt.imshow(cm, interpolation='nearest', cmap='Blues')
+plt.title('Confusion Matrix', fontsize=20, weight='bold', pad=20)
+plt.suptitle(f'Accuracy: {accuracy:.2f}%', fontsize=16, color='darkslategray', weight='bold', y=0.92)
+
+# Define tick marks based on the number of unique classes
+tick_marks = np.arange(len(np.unique(y_test)))
+plt.xticks(tick_marks, np.unique(y_test), fontsize=12, weight='bold')
+plt.yticks(tick_marks, np.unique(y_test), fontsize=12, weight='bold')
+
+# Set labels for the axes with bold fonts
+plt.ylabel('True Label', fontsize=14, weight='bold', labelpad=15)
+plt.xlabel('Predicted Label', fontsize=14, weight='bold', labelpad=15)
+
+# Annotate each cell in the confusion matrix with the count
+thresh = cm.max() / 2
+for i, j in np.ndindex(cm.shape):
+    plt.text(j, i, f'{cm[i, j]}', ha='center', va='center',
+             color='white' if cm[i, j] > thresh else 'black',
+             fontsize=14, fontweight='bold')
+
+# Customize color bar for a subtle, integrated look
+cbar = plt.colorbar(fraction=0.046, pad=0.04)
+cbar.ax.tick_params(labelsize=10)
+
+# Minor gridlines for a polished separation of cells
+plt.gca().set_xticks(np.arange(-.5, len(tick_marks)), minor=True)
+plt.gca().set_yticks(np.arange(-.5, len(tick_marks)), minor=True)
+plt.grid(which='minor', color='gray', linestyle='-', linewidth=0.5)
+plt.tick_params(which='minor', bottom=False, left=False)  # Hide minor ticks
+
+# Adjust layout for a clean, professional look
+plt.tight_layout(rect=[0, 0, 1, 0.9])
+plt.show()
+```
+
+* "X = dataset.iloc[:,0:1].values" values are set from [:,0:1] to [:,6:7] to obtain individual variable results.
+   * X = dataset.iloc[:,0:1] - Age
+   * X = dataset.iloc[:,1:2] - Tenure
+   * X = dataset.iloc[:,2:3] - Usage Frequency
+   * X = dataset.iloc[:,3:4] - Support Calls
+   * X = dataset.iloc[:,4:5] - Payment Delays
+   * X = dataset.iloc[:,5:6] - Total Spend
+   * X = dataset.iloc[:,6:7] - Last Interaction
+
+
+# Interference using GUI
+## Linear Regression
+* Based on the model the value of the following variables are set t0:
+   1. Longitude = -122.23
+   2. Latitude = 37.84
+   3. Housing Median Age = 50
+   4. Total rooms = 2515
+   5. Total Bedrooms = 399
+   6. Populations = 970
+   7. Households = 373
+   8. Median Income = 5.8596
+
+* Actual
+   * House Median Value = $327,600
+
+* Model Prediction
+   * House Median Value = $328,762.41
+   * Accuracy = 81.32 %
+
+![alt text](<Image Resources/Linear Regresion Image Resources/Linear Regression Interface.png>)
+
+
+## Logistic Regression
+* Based on the model the value of the following variables are set t0:
+   1. Age = 42
+   2. Tenure = 46
+   3. Usage Frequency = 10
+   4. Support Calls = 0
+   5. Payment Delays = 26
+   6. Total Spend = 313
+   7. Last Interaction = 3
+
+* Actual
+   *Churn = 1 
+* Model Prediction
+   * Churn = 1
+   * Accuracy = 81.32 %
 
 # Summary
-
 # Linear Regression
 
 ## Variable Imporatance Analysis Based on R-squared

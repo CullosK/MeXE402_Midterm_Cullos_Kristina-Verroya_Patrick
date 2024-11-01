@@ -23,6 +23,21 @@ root.title("Customer Churn Prediction")
 root.attributes('-fullscreen', True)  # Set the window to full screen
 root.configure(bg="#e6f7ff")  # Light blue background
 
+# Create a frame for the title bar with buttons
+title_frame = tk.Frame(root, bg="#e6f7ff")
+title_frame.pack(side=tk.TOP, fill=tk.X)
+
+# Add the title label to the title frame
+title_label = tk.Label(title_frame, text="Logistic Regression Model: Churn Prediction", bg="#e6f7ff", font=("Arial", 16, "bold"), fg="#2c3e50")
+title_label.pack(side=tk.LEFT, padx=20, pady=10)
+
+# Create minimize and exit buttons in the title frame
+minimize_button = tk.Button(title_frame, text="_", command=root.iconify, bg="#ff9966", fg="white", font=("Arial", 12), relief='flat')
+minimize_button.pack(side=tk.RIGHT, padx=5)
+
+exit_button = tk.Button(title_frame, text="X", command=root.destroy, bg="#ff6666", fg="white", font=("Arial", 12), relief='flat')
+exit_button.pack(side=tk.RIGHT)
+
 # Label to display prediction results
 prediction_label = tk.Label(root, text="", bg="#e6f7ff", font=("Arial", 14, "bold"), fg="#2c3e50")
 prediction_label.pack(side=tk.LEFT, padx=20, pady=10)
@@ -138,25 +153,6 @@ def predict_value(user_input):
     # Display the prediction result
     prediction_label.config(text=f"Churn Prediction: {prediction[0]}")
 
-# Function to minimize the window
-def minimize_window():
-    root.iconify()
-
-# Function to exit the application
-def exit_app():
-    root.destroy()
-
-# Create a frame for the title bar with buttons
-title_frame = tk.Frame(root, bg="#e6f7ff")
-title_frame.pack(side=tk.TOP, fill=tk.X)
-
-# Create minimize and exit buttons
-minimize_button = tk.Button(title_frame, text="_", command=minimize_window, bg="#ff9966", fg="white", font=("Arial", 12), relief='flat')
-minimize_button.pack(side=tk.RIGHT, padx=5)
-
-exit_button = tk.Button(title_frame, text="X", command=exit_app, bg="#ff6666", fg="white", font=("Arial", 12), relief='flat')
-exit_button.pack(side=tk.RIGHT)
-
 # Create a frame for checkboxes
 frame = tk.Frame(root, bg="#e6f7ff", padx=20, pady=10)
 frame.pack(side=tk.LEFT, padx=20)
@@ -192,10 +188,6 @@ for i, label in enumerate(checkbox_labels):
 # Create a continue button
 continue_button = tk.Button(root, text="Continue", command=continue_action, bg="#66b3ff", fg="white", font=("Arial", 12), relief='raised')
 continue_button.pack(side=tk.LEFT, padx=20, pady=10)
-
-# Add a decorative label at the top and anchor it to the left
-title_label = tk.Label(root, text="Logistic Regression: Customer Churn Prediction", bg="#e6f7ff", font=("Arial", 16, "bold"), fg="#2c3e50")
-title_label.pack(anchor='w', padx=20, pady=10)
 
 # Start the Tkinter event loop
 root.mainloop()

@@ -20,22 +20,21 @@ root.title("Linear Regression: California Housing Price")
 root.attributes('-fullscreen', True)  # Set the window to full screen
 root.configure(bg="#e6f7ff")  # Light blue background
 
+# Title label at the top left
+title_label = tk.Label(root, text="Linear Regression: California Housing Price", bg="#e6f7ff", font=("Arial", 16, "bold"))
+title_label.pack(anchor='nw', padx=20, pady=10)
+
 # Label to display prediction results
 prediction_label = tk.Label(root, text="", bg="#e6f7ff", font=("Arial", 12, "bold"))
 prediction_label.pack(side=tk.LEFT, padx=20, pady=10)
 
-# Label to display r2 and adj_r2
+# Label to display R-squared and Adjusted R-squared
 r2_label = tk.Label(root, text="", bg="#e6f7ff", font=("Arial", 10))
 r2_label.pack(side=tk.LEFT, padx=20, pady=10)
 
-# Function to plot regression line and predicted values
-def plot_regression_line(X_test, y_test, y_pred, new_input=None, new_prediction=None):
-    if plot_frame.winfo_children():
-        for widget in plot_frame.winfo_children():
-            widget.destroy()
-    
-    # Create a smaller Matplotlib figure and axis
-    fig, ax = plt.subplots(figsize=(6, 4))  # Adjusted size for smaller graph
+# Function to plot the regression line and predicted values
+def plot_regression_line(X_test, y_test, y_pred):
+    fig, ax = plt.subplots(figsize=(6, 4))
     ax.scatter(y_test, y_pred, color='blue', label='Predicted vs. Actual', alpha=0.6)
     ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], 'r--', label='Ideal Fit')
     ax.set_xlabel('Actual Values')
@@ -44,16 +43,16 @@ def plot_regression_line(X_test, y_test, y_pred, new_input=None, new_prediction=
     ax.legend()
     ax.grid(True)
 
-    # Highlight the new input and its prediction if provided
-    if new_input is not None and new_prediction is not None:
-        ax.plot(new_input[0], new_prediction, 'go', markersize=10, label='Input Prediction')  # Green dot for the new prediction
-
-    plt.tight_layout()
-
-    # Embed the plot into the Tkinter window
+    global canvas
     canvas = FigureCanvasTkAgg(fig, master=plot_frame)
     canvas.draw()
     canvas.get_tk_widget().pack(fill=tk.BOTH, expand=True)
+
+# Function to overlay new predictions on the plot
+def plot_prediction_overlay(new_input=None, new_prediction=None):
+    if new_input is not None and new_prediction is not None:
+        canvas.figure.gca().plot(new_input[0], new_prediction, 'go', markersize=10, label='Input Prediction')
+        canvas.draw()
 
 # Function to create text boxes for selected checkboxes
 def continue_action():
@@ -61,8 +60,7 @@ def continue_action():
         prediction_label.config(text="Error: Dataset not loaded.")
         return
 
-    selected_options.clear()  # Clear previous selections
-    
+    selected_options.clear()
     selected_columns = []
 
     for i, var in enumerate(checkbox_vars):
@@ -83,7 +81,6 @@ def continue_action():
     model = LinearRegression()
     model.fit(X_train, y_train)
 
-    global y_pred
     y_pred = model.predict(X_test)
 
     r2 = r2_score(y_test, y_pred)
@@ -111,15 +108,14 @@ def continue_action():
 
 def predict_value():
     input_values = [float(entry.get()) for entry in user_input]
-    
     input_array = np.array(input_values).reshape(1, -1)
-    
     prediction = model.predict(input_array)
 
-    prediction_label.config(text=f"Predicted Value: ${prediction[0]:.2f}")
+    # Display the predicted value in two rows
+    prediction_label.config(text=f"Prediction Result:\n${prediction[0]:,.2f}")
 
-    # Highlight the input value on the plot
-    plot_regression_line(X_test, y_test, y_pred, new_input=[input_values], new_prediction=prediction)  # Pass user input as a list
+    # Overlay the new prediction on the existing plot
+    plot_prediction_overlay(new_input=[input_values], new_prediction=prediction)
 
 # Function to minimize the window
 def minimize_window():
@@ -129,32 +125,29 @@ def minimize_window():
 def exit_app():
     root.destroy()
 
-# Create a frame for the title bar with buttons
+# Title bar buttons
 title_frame = tk.Frame(root, bg="#e6f7ff")
 title_frame.pack(side=tk.TOP, fill=tk.X)
 
-# Create minimize and exit buttons
 minimize_button = tk.Button(title_frame, text="_", command=minimize_window, bg="#ff9966", fg="white", font=("Arial", 12), relief='flat')
 minimize_button.pack(side=tk.RIGHT, padx=5)
 
 exit_button = tk.Button(title_frame, text="X", command=exit_app, bg="#ff6666", fg="white", font=("Arial", 12), relief='flat')
 exit_button.pack(side=tk.RIGHT)
 
-# Create a frame for checkboxes
+# Frames for checkboxes, text boxes, and plot
 frame = tk.Frame(root, bg="#e6f7ff", padx=20, pady=10)
 frame.pack(side=tk.LEFT, padx=20, pady=10)
 
+text_frame = tk.Frame(root, bg="#e6f7ff")
+text_frame.pack(side=tk.LEFT, fill=tk.Y, padx=20, pady=10)
+
+plot_frame = tk.Frame(root, bg="#e6f7ff")
+plot_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
+
+# Checkbox and button setup
 checkbox_vars = []
-checkbox_labels = [
-    "Longitude", 
-    "Latitude", 
-    "Housing Median Age", 
-    "Total Rooms", 
-    "Total Bedrooms", 
-    "Population", 
-    "Households",
-    "Median Income"
-]
+checkbox_labels = ["Longitude", "Latitude", "Housing Median Age", "Total Rooms", "Total Bedrooms", "Population", "Households", "Median Income"]
 
 selected_options = []
 user_input = []
@@ -166,7 +159,7 @@ for i, label in enumerate(checkbox_labels):
     checkbox.pack(anchor='w', padx=10, pady=2)
     checkbox_vars.append(var)
 
-button_frame = tk.Frame(frame, bg="#e6f7ff")  # Frame for buttons
+button_frame = tk.Frame(frame, bg="#e6f7ff")
 button_frame.pack(anchor='w', padx=10, pady=10)
 
 continue_button = tk.Button(button_frame, text="Continue", command=continue_action, bg="#66b3ff", fg="white", font=("Arial", 12), relief='raised')
@@ -174,13 +167,7 @@ continue_button.pack(side=tk.LEFT, padx=5)
 
 predict_button = tk.Button(button_frame, text="Predict", command=predict_value, bg="#66b3ff", fg="white", font=("Arial", 12), relief='raised')
 predict_button.pack(side=tk.LEFT, padx=5)
-predict_button.config(state=tk.DISABLED)  # Initially disabled
-
-plot_frame = tk.Frame(root, bg="#e6f7ff")
-plot_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
-
-text_frame = tk.Frame(root, bg="#e6f7ff")  # Frame for text boxes
-text_frame.pack(side=tk.LEFT, fill=tk.Y, padx=20, pady=10)  # Fill vertically with padding
+predict_button.config(state=tk.DISABLED)
 
 # Run the application
 root.mainloop()
