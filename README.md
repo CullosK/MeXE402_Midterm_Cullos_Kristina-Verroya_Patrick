@@ -44,7 +44,7 @@
 # Linear Regression
 ## Data Cleaning Process
 
-* The data sheets contains the house pricinh
+* The data sheets contains the house pricing
 *  The data is cleaned using Microsoft Excel and 
 * The **rows that are incomplete are completely removed** for more accurate reading.
 * Here are the step by step process on deleting unwanted rows
