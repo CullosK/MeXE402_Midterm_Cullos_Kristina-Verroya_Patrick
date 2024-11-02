@@ -307,8 +307,21 @@ plt.show()
 
    5. Since the result found nothing blank in the data, we can proceed for the data processing.
       ![Screenshot 2024-10-30 112323](https://github.com/user-attachments/assets/3c4607d2-667d-4678-b90b-822556043dad)
+      
 
+### Details about the used variables in Logistic Regression
 
+* **Age**: The age of a user can influence how often they use the product, how they interact with its features, and how old the person is using the product.
+
+* **Gender**: Gender may impact product usage patterns, as different demographics often have unique preferences and needs.
+
+* **Tenure**: Tenure, or how long a user has been using the product, can affect their familiarity and loyalty to the product.
+
+* **Usage Frequency**: Usage frequency measures how often a user engages with the product, indicating their level of dependence or satisfaction.
+
+* **Support Calls**: The number of support calls reflects how frequently a user needs assistance, which may suggest their ease of use or any issues with the product.
+
+* **Payment Delay**: Payment delay records whether users consistently pay on time, providing insight into their financial commitment to the product.
 
 
 
