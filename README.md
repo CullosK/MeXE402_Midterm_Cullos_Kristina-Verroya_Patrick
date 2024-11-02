@@ -886,18 +886,3 @@ The process provides insights into which variables are driving the model’s per
 * This approach would refine the model, leveraging each variable’s unique contribution alongside others to achieve more reliable and nuanced outcomes.
 
 ![image](https://github.com/user-attachments/assets/f750a4b2-f7eb-42ab-ba57-b74077ded53b)
-
-
-### Details about the used variables in Logistic Regression
-
-* **Age**: The age of a user can influence how often they use the product, how they interact with its features, and how old the person is using the product.
-
-* **Gender**: Gender may impact product usage patterns, as different demographics often have unique preferences and needs.
-
-* **Tenure**: Tenure, or how long a user has been using the product, can affect their familiarity and loyalty to the product.
-
-* **Usage Frequency**: Usage frequency measures how often a user engages with the product, indicating their level of dependence or satisfaction.
-
-* **Support Calls**: The number of support calls reflects how frequently a user needs assistance, which may suggest their ease of use or any issues with the product.
-
-* **Payment Delay**: Payment delay records whether users consistently pay on time, providing insight into their financial commitment to the product.
