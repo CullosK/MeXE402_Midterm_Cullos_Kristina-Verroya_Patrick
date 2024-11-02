@@ -31,8 +31,10 @@
 ## Dataset used in Linear Regression
 * The data used in Logistic Regression is named **"customer_churn_dataset-testing-master.csv"** and later renamed to **"logistic.csv"**.
 * The original data consists of 64,735 rows and 12 rows.
-* The Following Columns are removed from the dataset: Customer ID, Gender, Subscription Type, and Contract Length.
+* The following columns are removed from the dataset: Customer ID, Gender, Subscription Type, and Contract Length.
+  
 ![alt text](<Image Resources/Logistic Image Resources/logistic_removed.png>)
+
 * After the process, the data set used consist of **64,735 rows and 8 rows.**
 
 # Project Objectives
@@ -45,7 +47,7 @@
 ## Data Cleaning Process
 
 * The data sheets contains the house pricing
-*  The data is cleaned using Microsoft Excel and 
+* The data is cleaned using Microsoft Excel and;
 * The **rows that are incomplete are completely removed** for more accurate reading.
 * Here are the step by step process on deleting unwanted rows
 
@@ -295,7 +297,7 @@ plt.show()
 ### Data Cleaning Process
 
 
-* The original data consists of 64,375 rows and 12 rows. The data is cleaned using Microsoft Excel and 
+* The original data consists of 64,375 rows and 12 rows. The data is cleaned using Microsoft Excel and; 
 * The **rows that are incomplete are completely removed** for more accurate reading.
 * Here is the step by step process for deleting unwanted rows:
 
@@ -305,7 +307,7 @@ plt.show()
    3. Select the **Blanks** to search for empty cell.
       ![Screenshot 2024-10-30 111851](https://github.com/user-attachments/assets/af9e99ec-0918-4d44-8cb7-a32e6935633d)
 
-   5. Since the result found nothing blank in the data, we can proceed for the data processing.
+   5. The result show that no rows or column is empty/blank.
       ![Screenshot 2024-10-30 112323](https://github.com/user-attachments/assets/3c4607d2-667d-4678-b90b-822556043dad)
       
 
@@ -579,7 +581,7 @@ plt.show()
 
 ### Individual Accuracy of Variables and Confusion Matrix
 * This code is used to represent individual accuracy and confusion matrix.
-* 
+  
 ```python
 X = dataset.iloc[:,0:1].values
 y = dataset.iloc[:,-1].values
@@ -651,6 +653,7 @@ plt.show()
 # Interference using GUI
 ## Linear Regression
 * Based on the model the value of the following variables are set t0:
+  
    1. Longitude = -122.23
    2. Latitude = 37.84
    3. Housing Median Age = 50
@@ -672,6 +675,7 @@ plt.show()
 
 ## Logistic Regression
 * Based on the model the value of the following variables are set t0:
+  
    1. Age = 42
    2. Tenure = 46
    3. Usage Frequency = 10
@@ -710,6 +714,7 @@ plt.show()
 ![alt text](<Image Resources/Linear Regresion Image Resources/Longitude.png>)
 
 ### Latitude
+
 * The regression line **does not capture much of the data variability**, with data points spread widely around it.
 * This suggests that latitude alone is **not a strong predictor** of housing value in this dataset.
 * A **minor negative trend** exists between latitude and housing value.
@@ -719,6 +724,7 @@ plt.show()
 
 
 ### Housing Median Age
+
 * The regression line captures only a **minor trend**, with a **lot of spread** around it, indicating **weak predictive power**.
 * This suggests that housing age alone **does not strongly predict housing value.**
 * There is a **minor positive trend** between housing age and value.
@@ -726,9 +732,11 @@ plt.show()
 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Housing Median Age.png>)
 
+
 ### Total Rooms
 
 * There is a positive correlation between total rooms and housing value, though it is relatively weak.
+  
 ![alt text](<Image Resources/Linear Regresion Image Resources/Total Rooms.png>)
 
 
@@ -737,6 +745,7 @@ plt.show()
 
 * The upward trend in the regression line indicates a **moderate positive correlation** between total rooms and housing value.
 * A higher number of rooms generally corresponds to a higher housing value, but many exceptions are observed in the data distribution.
+  
 ![alt text](<Image Resources/Linear Regresion Image Resources/Total Rooms Zoom.png>)
 
 
@@ -779,16 +788,19 @@ plt.show()
 
 
 ## Training vs Testing
+
 * Scatter Plot shows how the training and testing variable are plot wiith respect to each other.
    * Blue - Training Data
    * Orange - Testing Data
+     
 ![alt text](<Image Resources/Linear Regresion Image Resources/Training vs Testing Predictions.png>)
+
 
 # Logistic Regression
 
 ## Variable Importance Analysis based on Accuracy
 
-* "Variable Importance Analysis based on Accuracy" is a method used in machine learning and statistical modeling to evaluate the significance of each input variable in predicting an outcome. Here’s a breakdown of how it works:
+* Variable Importance Analysis based on Accuracy is a method used in machine learning and statistical modeling to evaluate the significance of each input variable in predicting an outcome. Here’s a breakdown of how it works:
 
   * Variable Importance: This refers to the contribution of each predictor (or feature) in a model. It shows how much each variable contributes to the model’s accuracy, helping to identify the most influential variables.
 
