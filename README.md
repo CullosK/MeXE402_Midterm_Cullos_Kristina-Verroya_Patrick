@@ -63,7 +63,27 @@
 
 * Deleted rows are rows 292 and 342
 
-  
+### Details about the used variables in Linear Regression
+
+1. **Longitude**: A measure of how far west a house is; a higher value is farther west.
+   
+2. **Latitude**: A measure of how far north a house is; a higher value is farther north.
+   
+3. **Housing Median Age**: Median age of a house within a block; a lower number is a newer building.
+   
+4. **Total Rooms**: Total number of rooms within a block.
+   
+5. **Total Bedrooms**: Total number of bedrooms within a block.
+    
+6. **Population**: Total number of people residing within a block.
+    
+7. **Households**: Total number of households, a group of people residing within a home unit, for a block.
+    
+8. **Median Income**: Median income for households within a block of houses (measured in tens of thousands of US Dollars).
+    
+9. **Median HouseValue**: Median house value for households within a block (measured in US Dollars).
+    
+10. **Ocean Proximity**: Location of the house w.r.t ocean/sea.
 
 
 ## Part 1 - Data Preprocessing
@@ -662,30 +682,6 @@ plt.show()
 
 * Explanation 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Variable Importance Base on R2.png>)
-
-
-### Details about the used variables in Linear Regression
-
-1. **Longitude**: A measure of how far west a house is; a higher value is farther west.
-   
-2. **Latitude**: A measure of how far north a house is; a higher value is farther north.
-   
-3. **Housing Median Age**: Median age of a house within a block; a lower number is a newer building.
-   
-4. **Total Rooms**: Total number of rooms within a block.
-   
-5. **Total Bedrooms**: Total number of bedrooms within a block.
-    
-6. **Population**: Total number of people residing within a block.
-    
-7. **Households**: Total number of households, a group of people residing within a home unit, for a block.
-    
-8. **Median Income**: Median income for households within a block of houses (measured in tens of thousands of US Dollars).
-    
-9. **Median HouseValue**: Median house value for households within a block (measured in US Dollars).
-    
-10. **Ocean Proximity**: Location of the house w.r.t ocean/sea.
-
 
 
 
