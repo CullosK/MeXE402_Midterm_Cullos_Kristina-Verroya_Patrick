@@ -62,8 +62,32 @@
     ![alt text](<Image Resources/image7.png>)
 
 * Deleted rows are rows 292 and 342
-  
 
+
+### Details about the used variables
+
+1. Longitude: A measure of how far west a house is; a higher value is farther west.
+   
+2. Latitude: A measure of how far north a house is; a higher value is farther north.
+   
+3. Housing Median Age: Median age of a house within a block; a lower number is a newer building.
+   
+4. Total Rooms: Total number of rooms within a block.
+   
+5. Total Bedrooms: Total number of bedrooms within a block.
+    
+6. Population: Total number of people residing within a block.
+    
+7. Households: Total number of households, a group of people residing within a home unit, for a block.
+    
+8. Median Income: Median income for households within a block of houses (measured in tens of thousands of US Dollars).
+    
+9. Median HouseValue: Median house value for households within a block (measured in US Dollars).
+    
+10. Ocean Proximity: Location of the house w.r.t ocean/sea.
+
+  
+____________________________________________________________________________________________________________
 
 
 ## Part 1 - Data Preprocessing
@@ -267,9 +291,6 @@ plt.show()
    * feature_index = 6 - Median Income
 
 * plt.xlim() is also used to adjust the range of the x-axis for better data viewing
-
-
-
 
 
 
@@ -617,6 +638,7 @@ plt.show()
    * X = dataset.iloc[:,6:7] - Last Interaction
 
 
+
 # Interference using GUI
 ## Linear Regression
 * Based on the model the value of the following variables are set t0:
@@ -664,6 +686,32 @@ plt.show()
 
 * Explanation 
 ![alt text](<Image Resources/Linear Regresion Image Resources/Variable Importance Base on R2.png>)
+
+
+### Details about the used variables
+
+1. **Longitude**: A measure of how far west a house is; a higher value is farther west.
+   
+2. **Latitude**: A measure of how far north a house is; a higher value is farther north.
+   
+3. **Housing Median Age**: Median age of a house within a block; a lower number is a newer building.
+   
+4. **Total Rooms**: Total number of rooms within a block.
+   
+5. **Total Bedrooms**: Total number of bedrooms within a block.
+    
+6. **Population**: Total number of people residing within a block.
+    
+7. **Households**: Total number of households, a group of people residing within a home unit, for a block.
+    
+8. **Median Income**: Median income for households within a block of houses (measured in tens of thousands of US Dollars).
+    
+9. **Median HouseValue**: Median house value for households within a block (measured in US Dollars).
+    
+10. **Ocean Proximity**: Location of the house w.r.t ocean/sea.
+
+
+
 
 ## Linear Regression Model Graph of Training Variables
 
@@ -757,11 +805,11 @@ plt.show()
 
 * "Variable Importance Analysis based on Accuracy" is a method used in machine learning and statistical modeling to evaluate the significance of each input variable in predicting an outcome. Here’s a breakdown of how it works:
 
-   1. Variable Importance: This refers to the contribution of each predictor (or feature) in a model. It shows how much each variable contributes to the model’s accuracy, helping to identify the most influential variables.
+  * Variable Importance: This refers to the contribution of each predictor (or feature) in a model. It shows how much each variable contributes to the model’s accuracy, helping to identify the most influential variables.
 
-   2. Based on Accuracy: This approach measures the importance of assessing how each variable affects the overall model accuracy. Generally, this is done by:
+  * Based on Accuracy: This approach measures the importance of assessing how each variable affects the overall model accuracy. Generally, this is done by:
 
-   3. Training the model with all features to get a baseline accuracy.
+  * Training the model with all features to get a baseline accuracy.
        * Then, each variable is "shuffled" (i.e., its values are permuted randomly or temporarily removed).
        * The model's accuracy is recalculated without that variable, and the drop in accuracy shows the variable's importance: a larger drop indicates a higher importance for that feature.
        * Interpretation: Variables with the greatest accuracy drop are the most influential, as the model depends heavily on them to make predictions. This method can be particularly useful in tree-based models (e.g., random forests), but can also apply to other machine learning models.
@@ -842,3 +890,17 @@ The process provides insights into which variables are driving the model’s per
 
 ![image](https://github.com/user-attachments/assets/f750a4b2-f7eb-42ab-ba57-b74077ded53b)
 
+
+### Details about the used variables
+
+* **Age**: The age of a user can influence how often they use the product, how they interact with its features, and how old the person is using the product.
+
+* **Gender**: Gender may impact product usage patterns, as different demographics often have unique preferences and needs.
+
+* **Tenure**: Tenure, or how long a user has been using the product, can affect their familiarity and loyalty to the product.
+
+* **Usage Frequency**: Usage frequency measures how often a user engages with the product, indicating their level of dependence or satisfaction.
+
+* **Support Calls**: The number of support calls reflects how frequently a user needs assistance, which may suggest their ease of use or any issues with the product.
+
+* **Payment Delay**: Payment delay records whether users consistently pay on time, providing insight into their financial commitment to the product.
